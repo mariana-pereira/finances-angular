@@ -1,0 +1,15 @@
+<div class="container">
+    <header>
+        <span>
+            Tem uma conta?
+            <button routerLink='/'>Conecte-se</button>
+        </span>
+    </header>
+    <h1>finances</h1>
+    <form [formGroup]='userForm' (ngSubmit)="onSubmit()">
+        <input type='text' name='name' placeholder='nome' formControlName='name' />
+        <input type='text' name='email' placeholder='e-mail' formControlName='email' />
+        <input type='password' name='password' placeholder='senha' formControlName='password' />
+        <button type="submit">Cadastrar</button>
+    </form>
+</div>
