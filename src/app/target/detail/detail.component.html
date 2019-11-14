@@ -1,0 +1,20 @@
+<div class="container">
+
+    <div class="content">
+        <div *ngIf='target !== null' class="detail">
+            <h1>{{target.name}}</h1>
+            <h4>{{formatDate(target.deadline)}}</h4>
+            <p>Valor necessário: {{target.necessary_amount}}</p>
+            <p>Valor atual: {{target.actual_amount}}</p>
+        </div>
+        <div class="action">
+            <button type='button'>
+                <mat-icon class="material-icons color_purple">edit</mat-icon>
+            </button>
+            <button type='button'>
+                <mat-icon class="material-icons color_purple">delete</mat-icon>
+            </button>
+        </div>
+        
+    </div>
+</div>

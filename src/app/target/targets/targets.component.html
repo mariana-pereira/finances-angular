@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="content">
+        <div class='title-container'>
+            <h1>Objetivos</h1>
+        </div>
+        <div *ngIf='targets?.length > 0'>
+            <div class="card" *ngFor='let target of targets' (click)="navigate('/target/detail/' + target.id)">
+                <span class="title">{{target.name}}</span>
+                <span class="type">{{formatDate(target.deadline)}}</span>
+                <div class="amount">
+                    <span>Valor necessário: {{target.necessary_amount}}</span>
+                    <span>Valor atual: {{target.actual_amount}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button (click)="navigate('/target/add')">Adicionar objetivo</button>
+        </div>
+    </div>
+</div>

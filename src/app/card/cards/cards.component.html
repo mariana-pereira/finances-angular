@@ -4,7 +4,7 @@
             <h1>Cartões</h1>
         </div>
         <div *ngIf='cards?.length > 0'>
-            <div class="card" *ngFor='let card of cards' >
+            <div class="card" *ngFor='let card of cards' (click)="navigate('/card/detail/' + card.id)">
                 <span class="title">{{card.name}}</span>
                 <span class="type">{{card.number}}</span>
                 <div class="amount">

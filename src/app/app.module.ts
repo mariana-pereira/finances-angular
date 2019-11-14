@@ -8,6 +8,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { CardModule } from './card/card.module';
+import { TargetModule } from './target/target.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CardModule } from './card/card.module';
     AuthModule.forRoot(),
     HttpClientModule,
     BrowserAnimationsModule,
-    CardModule
+    CardModule,
+    TargetModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

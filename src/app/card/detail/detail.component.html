@@ -4,7 +4,7 @@
         <div *ngIf='card !== null' class="detail">
             <h1>{{card.name}}</h1>
             <h4>{{card.number}}</h4>
-            <h4>Vencimento: {{card.expiry_date}}</h4>
+            <h4>Vencimento: {{formatDate(card.expiry_date)}}</h4>
             <p>Limite total: {{card.total_limit}}</p>
             <p>Limite disponível: {{card.available_limit}}</p>
         </div>
