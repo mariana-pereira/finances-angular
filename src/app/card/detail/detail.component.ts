@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
-import { AccountService } from '../account.service';
+import { CardService } from '../card.service';
 
 @Component({
   selector: 'app-detail',
@@ -8,21 +8,21 @@ import { AccountService } from '../account.service';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  account: any = null;
+
+  card: any = null;
 
   constructor(
-    private accountService: AccountService,
+    private cardService: CardService,
     private route: ActivatedRoute
-    ) { }
+  ) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get("id");
 
-    this.accountService.show(id).subscribe((data: any) => {
-      this.account = (data)
+    this.cardService.show(id).subscribe((data: any) => {
+      this.card = (data)
+      console.log(this.card)
     });
   }
-
-  
 
 }

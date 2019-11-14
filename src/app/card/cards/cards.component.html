@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="content">
+        <div class='title-container'>
+            <h1>Cartões</h1>
+        </div>
+        <div *ngIf='cards?.length > 0'>
+            <div class="card" *ngFor='let card of cards' >
+                <span class="title">{{card.name}}</span>
+                <span class="type">{{card.number}}</span>
+                <div class="amount">
+                    <span>Saldo em conta: {{card.total_limit}}</span>
+                    <span>Saldo investido: {{card.available_limit}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button (click)="navigate('/card/add')">Adicionar cartão</button>
+        </div>
+    </div>
+</div>

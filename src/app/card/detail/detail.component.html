@@ -1,0 +1,34 @@
+<div class="container">
+
+    <div class="content">
+        <div *ngIf='card !== null' class="detail">
+            <h1>{{card.name}}</h1>
+            <h4>{{card.number}}</h4>
+            <h4>Vencimento: {{card.expiry_date}}</h4>
+            <p>Limite total: {{card.total_limit}}</p>
+            <p>Limite disponível: {{card.available_limit}}</p>
+        </div>
+        <div class="action">
+            <button type='button'>
+                <mat-icon class="material-icons color_purple">edit</mat-icon>
+            </button>
+            <button type='button'>
+                <mat-icon class="material-icons color_purple">delete</mat-icon>
+            </button>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <mat-icon class="material-icons color_purple">add</mat-icon>
+                <h1>Adicionar fatura</h1>
+            </div>
+            <div class="card">
+                <mat-icon class="material-icons color_purple">done</mat-icon>
+                <h1>Faturas abertas</h1>
+            </div>
+            <div class="card">
+                <mat-icon class="material-icons color_purple">done_all</mat-icon>
+                <h1>Faturas fechadas</h1>
+            </div>
+        </div>
+    </div>
+</div>

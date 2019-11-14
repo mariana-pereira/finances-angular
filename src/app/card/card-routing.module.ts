@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AccountsComponent } from './accounts/accounts.component';
-import { DetailComponent } from './detail/detail.component';
+import { CardsComponent } from './cards/cards.component';
 import { AddComponent } from './add/add.component';
+import { DetailComponent } from './detail/detail.component';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'accounts' },
-  { path: 'accounts', component: AccountsComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'cards' },
+  { path: 'cards', component: CardsComponent },
   { path: 'detail/:id', component: DetailComponent },
   { path: 'add', component: AddComponent }
 ];
@@ -16,4 +16,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AccountRoutingModule { }
+export class CardRoutingModule { }
