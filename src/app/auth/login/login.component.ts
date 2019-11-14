@@ -15,6 +15,8 @@ export class LoginComponent implements OnInit {
     password: new FormControl('')
   });
 
+  isLoading: boolean = false;
+
   constructor(
     private authService: AuthService,
     private router: Router,
@@ -25,14 +27,17 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+    this.isLoading = true;
     const credentials = this.loginForm.value;
     this.authService.login(credentials)
     .subscribe(
-      (user) => {
-        this.router.navigateByUrl('/forgot_password');
+      (data) => {
+        this.isLoading = false;
+        this.router.navigateByUrl('/account/accounts');
       },
       (err) => {
         console.log(err);
+        this.isLoading = false;
       }
       
     )

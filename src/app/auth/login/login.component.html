@@ -12,4 +12,7 @@
         <button type="submit">Entrar</button>
     </form>
     <button routerLink='/forgot_password'>Esqueceu a senha?</button>
+    <div class="loading-indicator">
+        <mat-progress-spinner *ngIf='isLoading' class="mat-spinner-color"  [diameter]="50" mode="indeterminate" value='50'></mat-progress-spinner>
+    </div>
 </div>

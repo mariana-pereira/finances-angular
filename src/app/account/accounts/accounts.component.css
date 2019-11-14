@@ -1,0 +1,85 @@
+.container {
+    min-height: 100%;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+}
+
+.title-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-container h1 {
+    color: #2e2f2b;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto 0;
+    padding: 30px;
+    background: #ccc2da;
+    border: 1px solid #ccc2da;
+    border-radius: 4px;
+  
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 18px;
+    color: #2e2f2b;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.type {
+    font-size: 16px;
+    color: #2e2f2b;
+    align-self: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin-top: 5px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.amount span {
+    font-size: 14px;
+    color: #2e2f2b;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 0;
+    background: #695eb8;
+    color: #fafafa;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

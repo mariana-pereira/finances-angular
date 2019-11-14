@@ -1,0 +1,35 @@
+<div class="container">
+
+    <div class="content">
+        <div *ngIf='account !== null' class="detail">
+            <h1>{{account.bank}}</h1>
+            <h4>{{account.type}}</h4>
+            <h4>Agência: {{account.branch}}</h4>
+            <h4>Conta: {{account.account_number}}</h4>
+            <p>Saldo em conta: {{account.account_balance}}</p>
+            <p>Saldo investido: {{account.investments_balance}}</p>
+        </div>
+        <div class="action">
+            <button type='button'>
+                <mat-icon class="material-icons color_purple">edit</mat-icon>
+            </button>
+            <button type='button'>
+                <mat-icon class="material-icons color_purple">delete</mat-icon>
+            </button>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <i class="fa fa-arrow-down"></i>
+                <h1>Adicionar crédito</h1>
+            </div>
+            <div class="card">
+                <i class="fa fa-arrow-up"></i>
+                <h1>Adicionar débito</h1>
+            </div>
+            <div class="card">
+                <i class="fa fa-piggy-bank"></i>
+                <h1>Investir</h1>
+            </div>
+        </div>
+    </div>
+</div>

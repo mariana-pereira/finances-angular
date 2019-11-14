@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="content">
+        <h1>Adicionar Conta</h1>
+        <form [formGroup]='accountForm' (ngSubmit)="onSubmit()">
+
+            <input type='text' name='bank' placeholder='banco' formControlName='bank' />
+            <input type='text' name='branch' placeholder='agência' formControlName='branch' />
+            <input type='text' name='accountNumber' placeholder='número da conta' formControlName='account_number' />
+            <select name='type' formControlName='type'>
+                <option value="">Tipo de conta</option>
+                <option *ngFor='let type of types' [value]='type'>{{type}}</option>
+            </select>
+            <div class="button-container">
+                <button type="button" (click)="onCancel()">Cancelar</button>
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>

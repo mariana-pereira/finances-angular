@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -15,7 +16,10 @@ export class RegisterComponent implements OnInit {
     password: new FormControl('')
   });
 
-  constructor(private authService: AuthService) { }
+  constructor(
+    private authService: AuthService,
+    private router: Router
+    ) { }
 
   ngOnInit() {
   }
@@ -27,7 +31,7 @@ export class RegisterComponent implements OnInit {
     this.authService.register(user)
     .subscribe(
       (user) => {
-        console.log(user);
+        this.router.navigateByUrl('/account/accounts');
       },
       (err) => {
         console.log(err);
