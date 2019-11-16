@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'account', loadChildren: './account/account.module#AccountModule', canActivate: [ AuthGuard ] },
   { path: 'budget', loadChildren: './budget/budget.module#BudgetModule', canActivate: [ AuthGuard ] },
   { path: 'card', loadChildren: './card/card.module#CardModule', canActivate: [ AuthGuard ] },
+  { path: 'company', loadChildren: './company/company.module#CompanyModule', canActivate: [ AuthGuard ] },
   { path: 'target', loadChildren: './target/target.module#TargetModule', canActivate: [ AuthGuard ] }
 ];
 

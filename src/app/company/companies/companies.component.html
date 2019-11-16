@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="content">
+      <div class="title">
+        <h1>Empresas</h1>
+      </div>
+      <div *ngIf='companies !== null' class="card-container">
+          <div class="card" *ngFor='let company of companies'>
+            <mat-icon class="material-icons color_purple">business</mat-icon>
+            <h1>{{company.name}}</h1>
+            <div class="action">
+                <button type='button'>
+                    <mat-icon class="material-icons color_purple">edit</mat-icon>
+                </button>
+              <button type='button' >
+                <mat-icon class="material-icons color_purple">delete</mat-icon>
+              </button>
+            </div>
+        </div>
+    </div>
+      <div class="link">
+          <button type="button" (click)="navigate('/company/add')">Adicionar empresa</button>
+      </div>
+    </div>
+</div>

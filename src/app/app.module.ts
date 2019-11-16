@@ -11,6 +11,7 @@ import { CardModule } from './card/card.module';
 import { TargetModule } from './target/target.module';
 import { BudgetModule } from './budget/budget.module';
 import { MaterialModule } from './material.module';
+import { CompanyModule } from './company/company.module';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { MaterialModule } from './material.module';
     CardModule,
     TargetModule,
     BudgetModule,
-    MaterialModule
+    MaterialModule,
+    CompanyModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
