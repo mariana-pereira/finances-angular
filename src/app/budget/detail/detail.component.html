@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="content">
+        <div class='title'>
+            <h1>{{formatDate()}}</h1>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <strong>Total</strong>
+                <p>{{total}}</p>
+            </div>
+            <div *ngFor='let budget of budgets' class="card">
+                <strong>{{budget.name}}</strong>
+                <p>{{budget.amount}}</p>
+                <div>
+                    <button class='action' type='button'>
+                        <mat-icon class="material-icons color_purple">edit</mat-icon>
+                    </button>
+                    <button class="action" type='button'>
+                        <mat-icon class="material-icons color_purple">delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <button class="circle" (click)="navigate()">
+                <mat-icon class="icon" size='60'>add_circle</mat-icon>
+            </button>
+        </div>
+    </div>
+    </div>

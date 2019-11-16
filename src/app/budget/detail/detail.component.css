@@ -1,0 +1,94 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.content {
+    height: 100%; 
+    width: 100%;
+    background: #fff;
+    margin-top: 60px;
+}
+
+.title {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h1 {
+    font-size: 45px;
+    color: #2e2f2b;
+}
+
+.card-container {
+    width: 100%;
+    padding: 50px;
+    
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 30px;
+}
+
+.card {
+    width: 120px;
+    height: 120px;
+    border: 1px #bdb4c9;
+    border-radius: 5px;
+    background: #bdb4c9;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card strong {
+    margin-top: 10px;
+}
+
+.card p {
+    margin-top: 10px;
+}
+
+.card div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.action {
+    border: 0;
+    background: #bdb4c9;
+    cursor: pointer;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border: 0;
+    padding: 20px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon {
+    color: #695eb8;
+    transform: scale(3);
+}
+
+@media screen and (max-width:480px) {
+
+    .card-container {
+        width: 100%;
+        padding: 50px;
+        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+
+}

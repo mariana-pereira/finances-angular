@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="content">
+        <div class='title'>
+            <div>
+                <select class='date' (change)="onChange($event.target.value)">
+                    <option value="">ano</option>
+                    <option *ngFor='let date of dates' [value]='date' >{{date}}</option>
+                </select>
+            </div>
+        </div>
+        <div *ngIf='year !== null' class="card-container">
+            <div class="card" (click)="navigate('/budget/detail/' + year + '/1')">
+                <strong>Janeiro</strong>
+                <p>{{budget?.january}}</p>
+            </div>
+            <div class="card" (click)="navigate('/budget/detail/' + year + '/2')">
+                <strong>Fevereiro</strong>
+                <p>{{budget?.february}}</p>
+            </div>
+            <div class="card" (click)="navigate('/budget/detail/' + year + '/3')">
+                <strong>Março</strong>
+                <p>{{budget?.march}}</p>
+            </div>
+            <div class="card" (click)="navigate('/budget/detail/' + year + '/4')">
+                <strong>Abril</strong>
+                <p>{{budget?.april}}</p>
+            </div>
+            <div class="card" (click)="navigate('/budget/detail/' + year + '/5')">
+                <strong>Maio</strong>
+                <p>{{budget?.may}}</p>
+            </div>
+            <div class="card" (click)="navigate('/budget/detail/' + year + '/6')">
+                <strong>Junho</strong>
+                <p>{{budget?.june}}</p>
+            </div>
+            <div class="card" (click)="navigate('/budget/detail/' + year + '/7')">
+                <strong>Julho</strong>
+                <p>{{budget?.july}}</p>
+            </div>
+            <div class="card" (click)="navigate('/budget/detail/' + year + '/8')">
+                <strong>Agosto</strong>
+                <p>{{budget?.august}}</p>
+            </div>
+            <div class="card" (click)="navigate('/budget/detail/' + year + '/9')">
+                <strong>Setembro</strong>
+                <p>{{budget?.september}}</p>
+            </div>
+            <div class="card" (click)="navigate('/budget/detail/' + year + '/10')">
+                <strong>Outubro</strong>
+                <p>{{budget?.october}}</p>
+            </div>
+            <div class="card" (click)="navigate('/budget/detail/' + year + '/11')">
+                <strong>Novembro</strong>
+                <p>{{budget?.november}}</p>
+            </div>
+            <div class="card" (click)="navigate('/budget/detail/' + year + '/12')">
+                <strong>Dezembro</strong>
+                <p>{{budget?.december}}</p>
+            </div>
+        </div>
+    </div>
+</div>

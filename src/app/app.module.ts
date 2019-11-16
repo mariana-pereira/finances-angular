@@ -9,11 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { CardModule } from './card/card.module';
 import { TargetModule } from './target/target.module';
+import { BudgetModule } from './budget/budget.module';
+import { MaterialModule } from './material.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,9 @@ import { TargetModule } from './target/target.module';
     HttpClientModule,
     BrowserAnimationsModule,
     CardModule,
-    TargetModule
+    TargetModule,
+    BudgetModule,
+    MaterialModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
