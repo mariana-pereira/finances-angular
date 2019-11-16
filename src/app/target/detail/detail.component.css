@@ -7,7 +7,6 @@
 .content {
     height: 100%; 
     width: 100%;
-    background: #fff;
     margin-top: 60px;
     display: flex;
     flex-direction: column;
@@ -25,11 +24,13 @@
 }
 
 .detail h4 {
+    color: #fff;
     margin-bottom: 5px;
     font-size: 18px;
 }
 
 .detail p {
+    color: #fff;
     margin-bottom: 5px;
     font-size: 16px;
 }
@@ -47,7 +48,8 @@
 
 .action button {
     border: 0;
-    background: #fff;
+    background: 0;
+    margin-top: 30px;
     cursor: pointer;
 }
 
@@ -63,9 +65,9 @@
 .card {
     width: 200px;
     height: 200px;
-    border: 1px #fff;
+    border: 0;
     border-radius: 5px;
-    background: #bdb4c9;
+    background: rgba(255,255,255, 0.1);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -74,10 +76,33 @@
 .card h1 {
     margin-top: 40px;
     align-self: center;
-    color: #2e2f2b;
+    color: #fff;
     font-size: 16px;
 }
 
 .card i {
     color: #695eb8;
+}
+
+@media screen and (max-width:480px) {
+    .card-container {
+        width: 100%;
+        margin-top: 120px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 300px;
+        height: 200px;
+        border: 0;
+        border-radius: 5px;
+        background: rgba(255,255,255, 0.1);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
 }

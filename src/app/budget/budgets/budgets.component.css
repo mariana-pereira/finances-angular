@@ -1,4 +1,4 @@
-.contaoner {
+.container {
     height: 100%;
     width: 100%;
     display: flex;
@@ -7,9 +7,7 @@
 .content {
     height: 100%; 
     width: 100%;
-    background: #fff;
     margin-top: 60px;
-    margin-bottom: 1px;
 }
 
 .title {
@@ -22,9 +20,11 @@
 .date {
     height: 38px;
     width: 200px;
+    background-color: rgba(46,47,43, 0.8);
     border-radius: 4px;
-    border: 1px solid #2e2f2b;
+    border: 1px solid #bdb4c9;
     padding: 0 20px;
+    color: #bdb4c9;
     font-size: 14px;
 }
 
@@ -40,9 +40,9 @@
 .card {
     width: 120px;
     height: 120px;
-    border: 1px #bdb4c9;
+    border: 0;
     border-radius: 5px;
-    background: #bdb4c9;
+    background-color: rgba(255,255,255, 0.1);
     padding: 20px;
     text-align: center;
     display: flex;
@@ -50,10 +50,12 @@
 }
 
 .card strong {
+    color: #fff;
     margin-top: 10px;
 }
 
 .card p {
+    color: #fff;
     margin-top: 10px;
 }
 
@@ -70,9 +72,9 @@
     .card {
         width: 120px;
         height: 120px;
-        border: 1px #bdb4c9;
+        border: 0;
         border-radius: 5px;
-        background: #bdb4c9;
+        background-color: rgba(255,255,255, 0.1);
         padding: 20px;
         text-align: center;
         display: flex;

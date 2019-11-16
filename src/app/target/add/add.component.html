@@ -4,10 +4,14 @@
         <form [formGroup]='targetForm' (ngSubmit)="onSubmit()">
 
             <input type='text' name='name' placeholder='nome' formControlName='name' />
-            <input type='text' name='necessaryAmount' placeholder='valor necessário' formControlName='necessary_amount' />
+            <input type='text' name='necessaryAmount' placeholder='valor necessário'
+                formControlName='necessary_amount' />
             <div class="date">
-                <input class='date' matInput [matDatepicker]="picker" placeholder="vencimento" formControlName='deadline'>
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <input class='date' matInput [matDatepicker]="picker" placeholder="vencimento"
+                    formControlName='deadline'>
+                <mat-datepicker-toggle matSuffix [for]="picker">
+                    <mat-icon matDatepickerToggleIcon class="material-icons color_gray">keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </div>
             <div class="button-container">

@@ -7,7 +7,6 @@
 .content {
     height: 100%; 
     width: 100%;
-    background: #fff;
     margin-top: 60px;
 }
 
@@ -20,7 +19,7 @@
 
 .title h1 {
     font-size: 45px;
-    color: #2e2f2b;
+    color: #fff;
 }
 
 .card-container {
@@ -35,9 +34,9 @@
 .card {
     width: 120px;
     height: 120px;
-    border: 1px #bdb4c9;
+    border: 0;
     border-radius: 5px;
-    background: #bdb4c9;
+    background-color: rgba(255,255,255, 0.1);
     padding: 20px;
     text-align: center;
     display: flex;
@@ -45,10 +44,12 @@
 }
 
 .card strong {
+    color: #fff;
     margin-top: 10px;
 }
 
 .card p {
+    color: #fff;
     margin-top: 10px;
 }
 
@@ -60,7 +61,7 @@
 
 .action {
     border: 0;
-    background: #bdb4c9;
+    background: 0;
     cursor: pointer;
 }
 
@@ -69,7 +70,7 @@
     height: 120px;
     border: 0;
     padding: 20px;
-    background: #fff;
+    background: 0;
     display: flex;
     justify-content: center;
     cursor: pointer;

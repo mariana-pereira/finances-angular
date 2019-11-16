@@ -21,3 +21,5 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .material-icons.color_purple { color: #695eb8; }
+
+.material-icons.color_gray { color: #bdb4c9; }

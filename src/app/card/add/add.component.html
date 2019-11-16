@@ -9,8 +9,10 @@
             <input type='text' name='availableLimit' placeholder='limite disponível'
                 formControlName='available_limit' />
             <div class="date">
-                <input class='date' matInput [matDatepicker]="picker" placeholder="vencimento" formControlName='expiry_date'>
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <input matInput [matDatepicker]="picker" placeholder="vencimento" formControlName='expiry_date'>
+                <mat-datepicker-toggle matSuffix [for]="picker">
+                    <mat-icon matDatepickerToggleIcon class="material-icons color_gray">keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </div>
             <div class="button-container">
