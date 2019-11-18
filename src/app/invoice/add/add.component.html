@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="content">
+        <h1>Adicionar Fatura</h1>
+        <form [formGroup]='invoiceForm' (ngSubmit)="onSubmit()">
+            <select name='month' formControlName='month'>
+                <option value="">mês</option>
+                <option *ngFor='let month of months' [value]='month'>{{month}}</option>
+            </select>
+            <input type='text' name='year' placeholder='ano' formControlName='year' />
+            <div class="date">
+                <input matInput [matDatepicker]="picker" placeholder="vencimento" formControlName='expiry_date'>
+                <mat-datepicker-toggle matSuffix [for]="picker">
+                    <mat-icon matDatepickerToggleIcon class="material-icons color_gray">keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </div>
+            <div class="button-container">
+                <button type="button" (click)="onCancel()">Cancelar</button>
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>

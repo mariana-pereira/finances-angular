@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="content">
+        <div class='title-container'>
+            <h1>Faturas</h1>
+        </div>
+        <div *ngIf='invoices?.length > 0'>
+            <div class="card" *ngFor='let invoice of invoices' (click)="navigate('/invoice/detail/' + invoice.id)">
+                <span class="title">{{invoice.name}}</span>
+                <span class="type">{{invoice.card.name}}</span>
+                <div class="amount">
+                    <span>Vencimento: {{formatDate(invoice.expiry_date)}}</span>
+                    <span>Valor: {{invoice.invoice_amount}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

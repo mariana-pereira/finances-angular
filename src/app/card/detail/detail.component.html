@@ -17,15 +17,15 @@
             </button>
         </div>
         <div class="card-container">
-            <div class="card">
+            <div class="card" (click)="navigate('/invoice/add/' + card.id)">
                 <mat-icon class="material-icons color_purple">add</mat-icon>
                 <h1>Adicionar fatura</h1>
             </div>
-            <div class="card">
+            <div class="card" (click)="navigate('/invoice/card/' + card.id + '/0')">
                 <mat-icon class="material-icons color_purple">done</mat-icon>
                 <h1>Faturas abertas</h1>
             </div>
-            <div class="card">
+            <div class="card" (click)="navigate('/invoice/card/' + card.id + '/1')">
                 <mat-icon class="material-icons color_purple">done_all</mat-icon>
                 <h1>Faturas fechadas</h1>
             </div>

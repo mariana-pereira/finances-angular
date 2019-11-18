@@ -19,12 +19,12 @@ export class CardsComponent implements OnInit {
   ngOnInit() {
     this.cardService.index().subscribe((data: any[]) => {
       this.cards = data;
-      console.log(this.cards)
     })
   }
 
   navigate(route) {
     this.router.navigate([route]);
   }
+
 
 }

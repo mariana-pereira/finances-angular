@@ -1,0 +1,32 @@
+<div class="container">
+
+    <div class="content">
+        <div *ngIf='invoice !== null' class="detail">
+            <h1>{{invoice.name}}</h1>
+            <h4>{{invoice.month}} {{invoice.year}}</h4>
+            <h4>{{formatDate(invoice.expiry_date)}}</h4>
+            <p>Valor: {{invoice.invoice_amount}}</p>
+        </div>
+        <div class="action">
+            <button type='button'>
+                <mat-icon class="material-icons color_purple">edit</mat-icon>
+            </button>
+            <button type='button'>
+                <mat-icon class="material-icons color_purple">delete</mat-icon>
+            </button>
+        </div>
+        <div *ngIf='invoice?.paid === false' class="button-container" (click)='handlePay(invoice.id)'>
+            <button>Pagar</button>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <mat-icon class="material-icons color_purple">add</mat-icon>
+                <h1>Adicionar despesa</h1>
+            </div>
+            <div class="card">
+                <mat-icon class="material-icons color_purple">list</mat-icon>
+                <h1>Listar despesas</h1>
+            </div>
+        </div>
+    </div>
+</div>

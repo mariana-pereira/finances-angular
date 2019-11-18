@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from "@angular/router";
-import { CardService } from '../card.service';
+import { ActivatedRoute } from "@angular/router";
+import { InvoiceService } from '../invoice.service';
 
 @Component({
   selector: 'app-detail',
@@ -9,19 +9,19 @@ import { CardService } from '../card.service';
 })
 export class DetailComponent implements OnInit {
 
-  card: any = null;
+  invoice: any = null;
 
   constructor(
-    private cardService: CardService,
-    private route: ActivatedRoute,
-    private router: Router
+    private invoiceService: InvoiceService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get("id");
 
-    this.cardService.show(id).subscribe((data: any) => {
-      this.card = (data)
+    this.invoiceService.show(id).subscribe((data: any) => {
+      this.invoice = (data)
+      console.log(this.invoice)
     });
   }
 
@@ -31,8 +31,11 @@ export class DetailComponent implements OnInit {
     return formatedDate.toLocaleDateString();
   }
 
-  navigate(route) {
-    this.router.navigate([route]);
-  }
+  handlePay(id) {
+    this.invoiceService.pay(id).subscribe((data: any) => {
+      console.log(data);
+    })
+
+}
 
 }
