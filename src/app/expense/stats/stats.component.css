@@ -1,0 +1,77 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.content {
+    height: 100%; 
+    width: 100%;
+    margin-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 35px;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.title h1 {
+    color: #fff;
+    margin-top: 20px;
+}
+
+.check {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 35px;
+}
+
+.check label {
+    color: #fff;
+}
+
+.tile {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    
+  
+    display: flex;
+    justify-content: space-around;
+}
+
+.tile .name {
+    width: 50%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.tile .amount {
+    width: 50%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+@media screen and (max-width:480px) {
+    .table {
+        padding: 10px;
+    }
+}

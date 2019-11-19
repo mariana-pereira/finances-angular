@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="content">
+        <div class='icon'>
+            <button (click)="navigate('expense/stats')">
+                <mat-icon class="material-icons color_purple">pie_chart</mat-icon>
+            </button>
+        </div>
+        <div class='title'>
+            <h1>Despesas</h1>
+        </div>
+        <div class='check'>
+            <div>
+                <input type='radio' id='month' name='date' value='month' (click)='setExpenses($event)' />
+                <label htmlFor='month'>Mês</label>
+            </div>
+            <div>
+                <input type='radio' id='year' name='date' value='year' (click)='setExpenses($event)' />
+                <label htmlFor='year'>Ano</label>
+            </div>
+        </div>
+        <div *ngIf='expenses !== null' class="table">
+            <div class="header-container">
+                <div>
+                    <span>Data</span>
+                </div>
+                <div>
+                    <span>Valor</span>
+                </div>
+                <div>
+                    <span>Loja</span>
+                </div>
+                <div>
+                    <span>Categoria</span>
+                </div>
+            </div>
+            <div *ngFor='let expense of expenses' class="tile-container"
+                (click)="navigate('expense/detail/' + expense.id)">
+                <div>
+                    <span>{{formatDate(expense.date)}}</span>
+                </div>
+                <div>
+                    <span>{{expense.amount}}</span>
+                </div>
+                <div>
+                    <span>{{expense.shop}}</span>
+                </div>
+                <div>
+                    <span>{{expense.category}}</span>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div>
+                <h4> Total: {{total}}</h4>
+            </div>
+        </footer>
+    </div>
+</div>

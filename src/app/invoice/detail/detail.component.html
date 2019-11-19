@@ -19,11 +19,11 @@
             <button>Pagar</button>
         </div>
         <div class="card-container">
-            <div class="card">
+            <div class="card" (click)="navigate('expense/add/' + invoice.id + '/' + invoice.card_id)">
                 <mat-icon class="material-icons color_purple">add</mat-icon>
                 <h1>Adicionar despesa</h1>
             </div>
-            <div class="card">
+            <div class="card" (click)="navigate('expense/expenses/' + invoice.id )">
                 <mat-icon class="material-icons color_purple">list</mat-icon>
                 <h1>Listar despesas</h1>
             </div>

@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="content">
+        <div class='title'>
+            <h1>Despesas</h1>
+        </div>
+        <div *ngIf='expenses !== null' class="table">
+            <div class="header-container">
+                <div>
+                    <span>Data</span>
+                </div>
+                <div>
+                    <span>Valor</span>
+                </div>
+                <div>
+                    <span>Loja</span>
+                </div>
+                <div>
+                    <span>Categoria</span>
+                </div>
+            </div>
+            <div *ngFor='let expense of expenses' class="tile-container" (click)="navigate('expense/detail/' + expense.id)" >
+                <div>
+                    <span>{{formatDate(expense.date)}}</span>
+                </div>
+                <div>
+                    <span>{{expense.amount}}</span>
+                </div>
+                <div>
+                    <span>{{expense.shop}}</span>
+                </div>
+                <div>
+                    <span>{{expense.category}}</span>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div>
+                <h4> Total:  {{total}}</h4>
+            </div>
+        </footer>
+    </div>
+</div>

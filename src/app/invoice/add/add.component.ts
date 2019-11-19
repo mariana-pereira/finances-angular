@@ -26,7 +26,7 @@ export class AddComponent implements OnInit {
     private invoiceService: InvoiceService,
     private cardService: CardService,
     private route: ActivatedRoute
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get("id");
@@ -38,16 +38,16 @@ export class AddComponent implements OnInit {
 
   onSubmit() {
     const invoice = this.invoiceForm.value;
-    this.invoiceService.create({...invoice, name: this.card.name + ' ' + this.invoiceForm.controls.month.value}, this.id)
-    .subscribe(
-      (data) => {
-        console.log(data);
-      },
-      (err) => {
-        console.log(err);
-      }
-      
-    );
+    this.invoiceService.create({ ...invoice, name: this.card.name + ' ' + this.invoiceForm.controls.month.value }, this.id)
+      .subscribe(
+        (data) => {
+          console.log(data);
+        },
+        (err) => {
+          console.log(err);
+        }
+
+      );
     this.onCancel();
   }
 

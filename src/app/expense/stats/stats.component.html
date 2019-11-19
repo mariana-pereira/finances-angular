@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="content">
+        <div class='title'>
+            <h1>Stats</h1>
+        </div>
+        <div class='check'>
+            <div>
+                <input type='radio' id='month' name='date' value='month' (click)='setExpenses($event)' />
+                <label htmlFor='month'>Mês</label>
+            </div>
+            <div>
+                <input type='radio' id='year' name='date' value='year' (click)='setExpenses($event)' />
+                <label htmlFor='year'>Ano</label>
+            </div>
+        </div>
+        <div *ngIf="selected !== null" class="table">
+            <div class="tile">
+                <mat-icon class="material-icons color_purple">restaurant</mat-icon>
+                <span class='name'>Alimentação</span>
+                <span class='amount'>{{food}}</span>
+            </div>
+            <div class="tile">
+                <mat-icon class="material-icons color_purple">assignment_turned_in</mat-icon>
+                <span class='name'>Assinaturas</span>
+                <span class='amount'>{{subscription}}</span>
+            </div>
+            <div class="tile">
+                <mat-icon class="material-icons color_purple">spa</mat-icon>
+                <span class='name'>Beleza</span>
+                <span class='amount'>{{beauty}}</span>
+            </div>
+            <div class="tile">
+                <mat-icon class="material-icons color_purple">description</mat-icon>
+                <span class='name'>Contas</span>
+                <span class='amount'>{{bill}}</span>
+            </div>
+            <div class="tile">
+                <mat-icon class="material-icons color_purple">format_paint</mat-icon>
+                <span class='name'>Decoração</span>
+                <span class='amount'>{{decoration}}</span>
+            </div>
+            <div class="tile">
+                <mat-icon class="material-icons color_purple">sports_soccer</mat-icon>
+                <span class='name'>Esporte</span>
+                <span class='amount'>{{sport}}</span>
+            </div>
+            <div class="tile">
+                <mat-icon class="material-icons color_purple">weekend</mat-icon>
+                <span class='name'>Lazer</span>
+                <span class='amount'>{{recreation}}</span>
+            </div>
+            <div class="tile">
+                <mat-icon class="material-icons color_purple">pets</mat-icon>
+                <span class='name'>Pet</span>
+                <span class='amount'>{{pet}}</span>
+            </div>
+            <div class="tile">
+                <mat-icon class="material-icons color_purple">phonelink_lock</mat-icon>
+                <span class='name'>PicPay</span>
+                <span class='amount'>{{picpay}}</span>
+            </div>
+            <div class="tile">
+                <mat-icon class="material-icons color_purple">add_circle_outline</mat-icon>
+                <span class='name'>Saúde</span>
+                <span class='amount'>{{health}}</span>
+            </div>
+            <div class="tile">
+                <mat-icon class="material-icons color_purple">devices</mat-icon>
+                <span class='name'>Tech</span>
+                <span class='amount'>{{tech}}</span>
+            </div>
+            <div class="tile">
+                <mat-icon class="material-icons color_purple">directions_transit</mat-icon>
+                <span class='name'>Transporte</span>
+                <span class='amount'>{{transportation}}</span>
+            </div>
+            <div class="tile">
+                <mat-icon class="material-icons color_purple">local_mall</mat-icon>
+                <span class='name'>Vestuário</span>
+                <span class='amount'>{{clothing}}</span>
+            </div>
+            <div class="tile">
+                <mat-icon class="material-icons color_purple">bubble_chart</mat-icon>
+                <span class='name'>Outros</span>
+                <span class='amount'>{{other}}</span>
+            </div>
+        </div>
+    </div>

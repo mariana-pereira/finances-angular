@@ -13,6 +13,7 @@ import { BudgetModule } from './budget/budget.module';
 import { MaterialModule } from './material.module';
 import { CompanyModule } from './company/company.module';
 import { InvoiceModule } from './invoice/invoice.module';
+import { ExpenseModule } from './expense/expense.module';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { InvoiceModule } from './invoice/invoice.module';
     BudgetModule,
     MaterialModule,
     CompanyModule,
-    InvoiceModule
+    InvoiceModule,
+    ExpenseModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

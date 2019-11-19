@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
-import { InvoiceService } from '../invoice.service';
+import { ExpenseService } from '../expense.service';
 
 @Component({
   selector: 'app-detail',
@@ -9,10 +9,10 @@ import { InvoiceService } from '../invoice.service';
 })
 export class DetailComponent implements OnInit {
 
-  invoice: any = null;
+  expense: any = null;
 
   constructor(
-    private invoiceService: InvoiceService,
+    private expenseService: ExpenseService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
@@ -20,8 +20,9 @@ export class DetailComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get("id");
 
-    this.invoiceService.show(id).subscribe((data: any) => {
-      this.invoice = (data)
+    this.expenseService.show(id).subscribe((data: any) => {
+      this.expense = (data as any).expense;
+      console.log(this.expense)
     });
   }
 
@@ -29,13 +30,6 @@ export class DetailComponent implements OnInit {
     var formatedDate = new Date(date);
 
     return formatedDate.toLocaleDateString();
-  }
-
-  handlePay(id) {
-    this.invoiceService.pay(id).subscribe((data: any) => {
-      console.log(data);
-    })
-
   }
 
   navigate(route) {
