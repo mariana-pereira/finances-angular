@@ -21,11 +21,11 @@
                 </button>
             </div>
             <div class="card-container">
-                <div class="card">
+                <div class="card" (click)="navigate('/profit/add/' + investment.id)">
                         <mat-icon class="material-icons color_purple">add</mat-icon>
                     <h1>Adicionar rendimento</h1>
                 </div>
-                <div class="card">
+                <div class="card" (click)="navigate('/profit/profits/' + investment.id)">
                         <mat-icon class="material-icons color_purple">list</mat-icon>
                     <h1>Listar rendimentos</h1>
                 </div>
