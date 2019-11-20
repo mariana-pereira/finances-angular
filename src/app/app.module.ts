@@ -15,6 +15,7 @@ import { CompanyModule } from './company/company.module';
 import { InvoiceModule } from './invoice/invoice.module';
 import { ExpenseModule } from './expense/expense.module';
 import { ItemModule } from './item/item.module';
+import { InvestmentModule } from './investment/investment.module';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ItemModule } from './item/item.module';
     CompanyModule,
     InvoiceModule,
     ExpenseModule,
-    ItemModule
+    ItemModule,
+    InvestmentModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

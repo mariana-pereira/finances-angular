@@ -19,7 +19,7 @@ export class AccountsComponent implements OnInit {
   ngOnInit() {
 
     this.accountService.index().subscribe((data: any[])=>{
-      this.accounts = data;
+      this.accounts = (data as any).accounts;
     })  
   }
 

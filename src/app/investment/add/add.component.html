@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="content">
+        <h1>Adicionar Investimento</h1>
+        <form [formGroup]='investmentForm' (ngSubmit)="onSubmit()">
+
+            <input type='text' name='name' placeholder='nome' formControlName='name' />
+            <select name='type' formControlName='type'>
+                <option value="">Tipo de Investimento</option>
+                <option *ngFor='let type of types' [value]='type'>{{type}}</option>
+            </select>
+            <input type='text' name='tax' placeholder='taxa' formControlName='tax' />
+            <select name='target' formControlName='target_id'>
+                <option value="">Objetivo</option>
+                <option *ngFor='let target of targets' [value]='target.id'>{{target.name}}</option>
+            </select>
+            <div class="date">
+                <input matInput [matDatepicker]="picker1" placeholder="data de aplicação"
+                    formControlName='application_date'>
+                <mat-datepicker-toggle matSuffix [for]="picker1">
+                    <mat-icon matDatepickerToggleIcon class="material-icons color_gray">keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </div>
+            <div class="date">
+                <input matInput [matDatepicker]="picker2" placeholder="data de resgate" formControlName='redeem_date'>
+                <mat-datepicker-toggle matSuffix [for]="picker2">
+                    <mat-icon matDatepickerToggleIcon class="material-icons color_gray">keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+            </div>
+            <input type='text' name='application_amount' placeholder='valor da aplicação' formControlName='application_amount' />
+            <div class="button-container">
+                <button type="button" (click)="onCancel()">Cancelar</button>
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>

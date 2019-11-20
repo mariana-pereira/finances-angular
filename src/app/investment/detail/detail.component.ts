@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
-import { AccountService } from '../account.service';
+import { InvestmentService } from '../investment.service';
 
 @Component({
   selector: 'app-detail',
@@ -8,10 +8,11 @@ import { AccountService } from '../account.service';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  account: any = null;
+
+  investment: any = null;
 
   constructor(
-    private accountService: AccountService,
+    private investmentService: InvestmentService,
     private route: ActivatedRoute,
     private router: Router
     ) { }
@@ -19,13 +20,19 @@ export class DetailComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get("id");
 
-    this.accountService.show(id).subscribe((data: any) => {
-      this.account = (data)
+    this.investmentService.show(id).subscribe((data: any) => {
+      this.investment = (data)
     });
   }
 
   navigate(route) {
     this.router.navigate([route]);
+  }
+
+  formatDate(date) {
+    var formatedDate = new Date(date);
+
+    return formatedDate.toLocaleDateString();
   }
 
 }

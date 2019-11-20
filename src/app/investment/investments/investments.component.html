@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="content">
+        <div class='title-container'>
+            <h1>Investimentos</h1>
+        </div>
+        <div *ngIf='investments?.length > 0'>
+            <div class="card" *ngFor='let investment of investments'
+                (click)="navigate('/investment/detail/' + investment.id)">
+                <span class="title">{{investment.name}}</span>
+                <span class="type">Banco {{investment.account.bank}}</span>
+                <div class="amount">
+                    <span>Objetivo: {{investment.target.name}}</span>
+                    <span>Valor aplicado: {{investment.application_amount}}</span>
+                    <span>Valor total: {{investment.total_amount}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

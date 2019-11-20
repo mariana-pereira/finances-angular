@@ -19,15 +19,15 @@
         </div>
         <div class="card-container">
             <div class="card">
-                <i class="fa fa-arrow-down"></i>
+                <mat-icon class="material-icons color_purple">arrow_downward</mat-icon>
                 <h1>Adicionar crédito</h1>
             </div>
             <div class="card">
-                <i class="fa fa-arrow-up"></i>
+                <mat-icon class="material-icons color_purple">arrow_upward</mat-icon>
                 <h1>Adicionar débito</h1>
             </div>
-            <div class="card">
-                <i class="fa fa-dollar"></i>
+            <div class="card" (click)="navigate('/investment/add/' + account.id)">
+                <mat-icon class="material-icons color_purple">attach_money</mat-icon>
                 <h1>Investir</h1>
             </div>
         </div>

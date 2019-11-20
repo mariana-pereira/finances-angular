@@ -1,0 +1,34 @@
+<div class="container">
+
+        <div class="content">
+            <div *ngIf='investment !== null' class="detail">
+                <h1>{{investment.name}}</h1>
+                <h4>{{investment.type}} {{investment.tax}}</h4>
+                <h4>Banco: {{investment.account.bank}}</h4>
+                <h4>Objetivo: {{investment.target.name}}</h4>
+                <h4>Data da aplicação: {{formatDate(investment.application_date)}}</h4>
+                <h4>Data de resgate: {{formatDate(investment.redeem_date)}}</h4>
+                <p>Valor aplicado: {{investment.application_amount}}</p>
+                <p>Valor de rendimentos: {{investment.profits_amount}}</p>
+                <p>Valor total: {{investment.total_amount}}</p>
+            </div>
+            <div class="action">
+                <button type='button'>
+                    <mat-icon class="material-icons color_purple">edit</mat-icon>
+                </button>
+                <button type='button'>
+                    <mat-icon class="material-icons color_purple">delete</mat-icon>
+                </button>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                        <mat-icon class="material-icons color_purple">add</mat-icon>
+                    <h1>Adicionar rendimento</h1>
+                </div>
+                <div class="card">
+                        <mat-icon class="material-icons color_purple">list</mat-icon>
+                    <h1>Listar rendimentos</h1>
+                </div>
+            </div>
+        </div>
+    </div>
