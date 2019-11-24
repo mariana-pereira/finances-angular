@@ -1,0 +1,20 @@
+<div class="container">
+
+    <div class="content">
+        <div *ngIf='movimentation !== null' class="detail">
+            <h1>{{formatDate(movimentation.date)}}</h1>
+            <h4>{{movimentation.type}}</h4>
+            <h4>{{movimentation.category}}</h4>
+            <h4>Conta: {{movimentation.account.bank}}</h4>
+            <p>Valor: {{movimentation.amount}}</p>
+        </div>
+        <div class="action">
+            <button type='button'>
+                <mat-icon class="material-icons color_purple">edit</mat-icon>
+            </button>
+            <button type='button'>
+                <mat-icon class="material-icons color_purple">delete</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

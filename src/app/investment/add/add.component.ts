@@ -38,7 +38,6 @@ export class AddComponent implements OnInit {
 
     this.targetService.index().subscribe((data: any[])=>{
       this.targets = data;
-      console.log(this.targets)
     })
   }
 

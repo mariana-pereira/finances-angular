@@ -18,11 +18,11 @@
             </button>
         </div>
         <div class="card-container">
-            <div class="card">
+            <div class="card" (click)="navigate('/movimentation/add/income/' + account.id)">
                 <mat-icon class="material-icons color_purple">arrow_downward</mat-icon>
                 <h1>Adicionar crédito</h1>
             </div>
-            <div class="card">
+            <div class="card" (click)="navigate('/movimentation/add/outcome/' + account.id)">
                 <mat-icon class="material-icons color_purple">arrow_upward</mat-icon>
                 <h1>Adicionar débito</h1>
             </div>

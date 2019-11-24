@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="content">
+        <div class='title'>
+            <h1>Stats</h1>
+        </div>
+        <div class='check'>
+            <div>
+                <input type='radio' id='month' name='date' value='month' (click)='setMovimentations($event)' />
+                <label htmlFor='month'>Mês</label>
+            </div>
+            <div>
+                <input type='radio' id='year' name='date' value='year' (click)='setMovimentations($event)' />
+                <label htmlFor='year'>Ano</label>
+            </div>
+            <div>
+                <input type='radio' id='origin' name='date' value='origin' (click)='setMovimentations($event)' />
+                <label htmlFor='origin'>Origem</label>
+            </div>
+        </div>
+        <div *ngIf="selected === true" class="table">
+            <div>
+                <div class="tile">
+                    <mat-icon class="material-icons color_purple">attach_money</mat-icon>
+                    <span class='name'>Bonificação</span>
+                    <span class='amount'>{{bonus}}</span>
+                </div>
+                <div class="tile">
+                    <mat-icon class="material-icons color_purple">redeem</mat-icon>
+                    <span class='name'>Cashback</span>
+                    <span class='amount'>{{cashback}}</span>
+                </div>
+                <div class="tile">
+                    <mat-icon class="material-icons color_purple">note_add</mat-icon>
+                    <span class='name'>Extra</span>
+                    <span class='amount'>{{extra}}</span>
+                </div>
+                <div class="tile">
+                    <mat-icon class="material-icons color_purple">monetization_on</mat-icon>
+                    <span class='name'>Rendimentos</span>
+                    <span class='amount'>{{profit}}</span>
+                </div>
+                <div class="tile">
+                    <mat-icon class="material-icons color_purple">receipt</mat-icon>
+                    <span class='name'>Salário</span>
+                    <span class='amount'>{{salary}}</span>
+                </div>
+                <div class="tile">
+                    <mat-icon class="material-icons color_purple">bubble_chart</mat-icon>
+                    <span class='name'>Outros</span>
+                    <span class='amount'>{{other}}</span>
+                </div>
+            </div>
+            <div style="margin-top: 80px;">
+                <div class="tile">
+                    <mat-icon class="material-icons color_purple">shopping_cart</mat-icon>
+                    <span class='name'>Compras</span>
+                    <span class='amount'>{{shopping}}</span>
+                </div>
+                <div class="tile">
+                    <mat-icon class="material-icons color_purple">assignment_turned_in</mat-icon>
+                    <span class='name'>Pagamento de mensalidade</span>
+                    <span class='amount'>{{subscription}}</span>
+                </div>
+                <div class="tile">
+                    <mat-icon class="material-icons color_purple">description</mat-icon>
+                    <span class='name'>Pagamento de fatura</span>
+                    <span class='amount'>{{invoice}}</span>
+                </div>
+                <div class="tile">
+                    <mat-icon class="material-icons color_purple">local_atm</mat-icon>
+                    <span class='name'>Saque</span>
+                    <span class='amount'>{{withdrawal}}</span>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 30px;" *ngIf="selected === false">
+            <div *ngFor="let movimentation of movimentations" class="tile">
+                <mat-icon class="material-icons color_purple">business</mat-icon>
+                <span class='name'>{{movimentation.company.name}}</span>
+                <span class='amount'>{{movimentation.total}}</span>
+            </div>
+        </div>
+    </div>

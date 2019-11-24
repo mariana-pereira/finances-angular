@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="content">
+        <div class='icon'>
+            <button (click)="navigate('movimentation/stats')">
+                <mat-icon class="material-icons color_purple">pie_chart</mat-icon>
+            </button>
+        </div>
+        <div class='title'>
+            <h1>Extrato</h1>
+        </div>
+        <div class='check'>
+            <div>
+                <input type='radio' id='month' name='date' value='month' (click)='setMovimentations($event)' />
+                <label htmlFor='month'>Mês</label>
+            </div>
+            <div>
+                <input type='radio' id='year' name='date' value='year' (click)='setMovimentations($event)' />
+                <label htmlFor='year'>Ano</label>
+            </div>
+            <div>
+                <input type='radio' id='all' name='date' value='all' (click)='setMovimentations($event)' />
+                <label htmlFor='all'>Tudo</label>
+            </div>
+        </div>
+        <div *ngIf='movimentations !== null' class="table">
+            <div class="header-container">
+                <div>
+                    <span>Data</span>
+                </div>
+                <div>
+                    <span>Valor</span>
+                </div>
+                <div>
+                    <span>Categoria</span>
+                </div>
+                <div>
+                    <span>Conta</span>
+                </div>
+            </div>
+            <div *ngFor='let movimentation of movimentations' class="tile-container"
+                (click)="navigate('movimentation/detail/' + movimentation.id)">
+                <div>
+                    <span>{{formatDate(movimentation.date)}}</span>
+                </div>
+                <div>
+                    <span>{{movimentation.amount}}</span>
+                </div>
+                <div>
+                    <span>{{movimentation.category}}</span>
+                </div>
+                <div>
+                    <span>{{movimentation.account.bank}}</span>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div>
+                <h4> Total: {{total}}</h4>
+            </div>
+        </footer>
+    </div>
+</div>

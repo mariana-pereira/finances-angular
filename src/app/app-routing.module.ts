@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'investment', loadChildren: './investment/investment.module#InvestmentModule', canActivate: [ AuthGuard ] },
   { path: 'invoice', loadChildren: './invoice/invoice.module#InvoiceModule', canActivate: [ AuthGuard ] },
   { path: 'item', loadChildren: './item/item.module#ItemModule', canActivate: [ AuthGuard ] },
+  { path: 'movimentation', loadChildren: './movimentation/movimentation.module#MovimentationModule', canActivate: [ AuthGuard ] },
   { path: 'profit', loadChildren: './profit/profit.module#ProfitModule', canActivate: [ AuthGuard ] },
   { path: 'target', loadChildren: './target/target.module#TargetModule', canActivate: [ AuthGuard ] }
 ];

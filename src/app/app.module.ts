@@ -17,6 +17,7 @@ import { ExpenseModule } from './expense/expense.module';
 import { ItemModule } from './item/item.module';
 import { InvestmentModule } from './investment/investment.module';
 import { ProfitModule } from './profit/profit.module';
+import { MovimentationModule } from './movimentation/movimentation.module';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ProfitModule } from './profit/profit.module';
     ExpenseModule,
     ItemModule,
     InvestmentModule,
-    ProfitModule
+    ProfitModule,
+    MovimentationModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
