@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'budgets' },
   { path: 'budgets', component: BudgetsComponent },
   { path: 'detail/:year/:month', component: DetailComponent },
-  { path: 'add/:year/:month', component: AddComponent }
+  { path: 'add/:year/:month', component: AddComponent },
+  { path: 'edit/:id', component: AddComponent }
 ];
 
 @NgModule({

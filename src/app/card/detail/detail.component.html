@@ -9,7 +9,7 @@
             <p>Limite disponível: {{card.available_limit}}</p>
         </div>
         <div class="action">
-            <button type='button'>
+            <button type='button' (click)="navigate('/card/edit/' + card.id)">
                 <mat-icon class="material-icons color_purple">edit</mat-icon>
             </button>
             <button type='button'>

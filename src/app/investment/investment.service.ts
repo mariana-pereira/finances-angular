@@ -23,4 +23,12 @@ export class InvestmentService {
   show(id) {
     return this.http.get(`${this.url}/${id}`);
   }
+
+  update(investment, id, account, target) {
+    const headers = new HttpHeaders()
+            .set("account_id", account)
+            .set("target_id", target);
+            
+    return this.http.put(`${this.url}/${id}`, investment, {headers});
+  }
 }

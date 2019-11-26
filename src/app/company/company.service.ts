@@ -22,4 +22,8 @@ export class CompanyService {
   show(id) {
     return this.http.get(`${this.url}/${id}`);
   }
+
+  update(company, id) {
+    return this.http.put(`${this.url}/${id}`, company);
+  }
 }

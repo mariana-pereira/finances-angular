@@ -21,4 +21,8 @@ export class AccountService {
   show(id) {
     return this.http.get(`${this.url}/${id}`);
   }
+
+  update(account, id) {
+    return this.http.put(`${this.url}/${id}`, account);
+  }
 }

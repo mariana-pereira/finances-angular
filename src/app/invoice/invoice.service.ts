@@ -29,6 +29,10 @@ export class InvoiceService {
     return this.http.get(`${this.url}/${id}`);
   }
 
+  update(invoice, id) {
+    return this.http.put(`${this.url}/${id}`, invoice);
+  }
+
   paid(id, paid) {
     const headers = new HttpHeaders()
       .set("id", id)

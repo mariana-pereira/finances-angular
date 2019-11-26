@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'expenses/:id', component: InvoiceExpensesComponent },
   { path: 'detail/:id', component: DetailComponent },
   { path: 'add/:invoice/:card', component: AddComponent },
+  { path: 'edit/:id', component: AddComponent },
   { path: 'stats', component: StatsComponent }
 ];
 

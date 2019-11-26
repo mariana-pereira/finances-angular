@@ -43,6 +43,10 @@ export class ExpenseService {
     return this.http.get(`${this.url}/${id}`);
   }
 
+  update(expense, id) {
+    return this.http.put(`${this.url}/${id}`, expense);
+  }
+
   categoryMonth(month, year) {
     const headers = new HttpHeaders()
       .set("month", month)

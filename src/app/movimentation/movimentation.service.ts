@@ -48,6 +48,13 @@ export class MovimentationService {
     return this.http.get(`${this.url}/${id}`);
   }
 
+  update(movimentation, id, account) {
+    const headers = new HttpHeaders()
+            .set("account_id", account);
+
+    return this.http.put(`${this.url}/${id}`, movimentation, {headers});
+  }
+
   categoryMonth(month, year) {
     const headers = new HttpHeaders()
       .set("month", month)

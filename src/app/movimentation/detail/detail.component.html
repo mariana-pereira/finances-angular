@@ -9,7 +9,7 @@
             <p>Valor: {{movimentation.amount}}</p>
         </div>
         <div class="action">
-            <button type='button'>
+            <button type='button' (click)="navigate('movimentation/edit/' + movimentation.id)">
                 <mat-icon class="material-icons color_purple">edit</mat-icon>
             </button>
             <button type='button'>

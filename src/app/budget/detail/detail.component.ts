@@ -36,6 +36,10 @@ export class DetailComponent implements OnInit {
     this.router.navigate([`/budget/add/${this.year}/${this.month}`]);
   }
 
+  onEdit(id) {
+    this.router.navigate([`/budget/edit/${id}`]);
+  }
+
   formatDate() {
     var monthNames = [
         "Janeiro", "Fevereiro", "Março",

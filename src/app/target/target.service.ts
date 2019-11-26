@@ -22,4 +22,8 @@ export class TargetService {
   show(id) {
     return this.http.get(`${this.url}/${id}`);
   }
+
+  update(target, id) {
+    return this.http.put(`${this.url}/${id}`, target);
+  }
 }

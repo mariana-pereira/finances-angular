@@ -1,6 +1,6 @@
 <div class="container">
     <div class="content">
-        <h1>Adicionar Investimento</h1>
+        <h1>{{title}}</h1>
         <form [formGroup]='investmentForm' (ngSubmit)="onSubmit()">
 
             <input type='text' name='name' placeholder='nome' formControlName='name' />
@@ -9,7 +9,7 @@
                 <option *ngFor='let type of types' [value]='type'>{{type}}</option>
             </select>
             <input type='text' name='tax' placeholder='taxa' formControlName='tax' />
-            <select name='target' formControlName='target_id'>
+            <select *ngIf='edit === false' name='target' formControlName='target_id'>
                 <option value="">Objetivo</option>
                 <option *ngFor='let target of targets' [value]='target.id'>{{target.name}}</option>
             </select>

@@ -5,15 +5,16 @@ import { ActivatedRoute } from '@angular/router';
 import { CompanyService } from 'src/app/company/company.service';
 
 @Component({
-  selector: 'app-add-income',
-  templateUrl: './add-income.component.html',
-  styleUrls: ['./add-income.component.css']
+  selector: 'app-edit',
+  templateUrl: './edit.component.html',
+  styleUrls: ['./edit.component.css']
 })
-export class AddIncomeComponent implements OnInit {
+export class EditComponent implements OnInit {
 
   categories = ['Bonificação', 'Cashback', 'Extra', 'Rendimento', 'Salário', 'Transferência', 'Outros'];
 
-  incomeForm = new FormGroup({
+  movimentationForm = new FormGroup({
+    id: new FormControl(null),
     date: new FormControl(''),
     amount: new FormControl(''),
     category: new FormControl(''),
@@ -22,7 +23,7 @@ export class AddIncomeComponent implements OnInit {
 
   id: any;
 
-  companies: any[];
+  account_id: any;
 
   constructor(
     private movimentationService: MovimentationService,
@@ -33,14 +34,14 @@ export class AddIncomeComponent implements OnInit {
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get("id");
 
-    this.companyService.index().subscribe((data: any[])=>{
-      this.companies = data;
-    })
+    this.movimentationService.show(this.id).subscribe((data: any) => {
+      this.updateForm(data);
+    });
   }
 
   onSubmit() {
-    const income = this.incomeForm.value;
-    this.movimentationService.createIncome(income, this.id)
+    const movimentation = this.movimentationForm.value;
+    this.movimentationService.update(movimentation, this.id, this.account_id)
       .subscribe(
         (data) => {
           console.log(data);
@@ -54,7 +55,18 @@ export class AddIncomeComponent implements OnInit {
   }
 
   onCancel() {
-    this.incomeForm.reset();
+    this.movimentationForm.reset();
+  }
+
+  updateForm(movimentation) {
+    this.movimentationForm.patchValue({
+      id: movimentation.id,
+      date: movimentation.date,
+      amount: movimentation.amount,
+      category: movimentation.category
+    });
+
+    this.account_id = movimentation.account_id.toString();
   }
 
 }

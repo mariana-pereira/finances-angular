@@ -10,7 +10,7 @@
             <p>Saldo investido: {{account.investments_balance}}</p>
         </div>
         <div class="action">
-            <button type='button'>
+            <button type='button' (click)="navigate('/account/edit/' + account.id)">
                 <mat-icon class="material-icons color_purple">edit</mat-icon>
             </button>
             <button type='button'>

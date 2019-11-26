@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'invoices' },
   { path: 'invoices', component: InvoicesComponent },
   { path: 'detail/:id', component: DetailComponent },
-  { path: 'add/:id', component: AddComponent },
+  { path: 'add/:card', component: AddComponent },
+  { path: 'edit/:id', component: AddComponent },
   { path: 'card/:id/:paid', component: PaidComponent }
 ];
 

@@ -8,7 +8,7 @@
             <p>Valor atual: {{target.actual_amount}}</p>
         </div>
         <div class="action">
-            <button type='button'>
+            <button type='button' (click)="navigate('/target/edit/' + target.id)">
                 <mat-icon class="material-icons color_purple">edit</mat-icon>
             </button>
             <button type='button'>

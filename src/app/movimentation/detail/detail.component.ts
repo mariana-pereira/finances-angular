@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { MovimentationService } from '../movimentation.service';
 
 @Component({
@@ -13,7 +13,8 @@ export class DetailComponent implements OnInit {
 
   constructor(
     private movimentationService: MovimentationService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -21,7 +22,6 @@ export class DetailComponent implements OnInit {
 
     this.movimentationService.show(id).subscribe((data: any) => {
       this.movimentation = (data)
-      console.log(this.movimentation)
     });
   }
 
@@ -29,6 +29,10 @@ export class DetailComponent implements OnInit {
     var formatedDate = new Date(date);
 
     return formatedDate.toLocaleDateString();
+  }
+
+  navigate(route) {
+    this.router.navigate([route]);
   }
 
 }

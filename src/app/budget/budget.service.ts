@@ -32,4 +32,8 @@ export class BudgetService {
 
     return this.http.get(`${this.url}/dashboard`, {headers});
   }
+
+  update(budget, id) {
+    return this.http.put(`${this.url}/${id}`, budget);
+  }
 }

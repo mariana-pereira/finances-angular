@@ -8,7 +8,7 @@
             <mat-icon class="material-icons color_purple">business</mat-icon>
             <h1>{{company.name}}</h1>
             <div class="action">
-                <button type='button'>
+                <button type='button' (click)="navigate('/company/edit/' + company.id)">
                     <mat-icon class="material-icons color_purple">edit</mat-icon>
                 </button>
               <button type='button' >

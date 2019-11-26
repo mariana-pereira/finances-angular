@@ -10,7 +10,7 @@
             <p>Categoria: {{expense.category}}</p>
         </div>
         <div class="action">
-            <button type='button'>
+            <button type='button' (click)="navigate('expense/edit/' + expense.id)">
                 <mat-icon class="material-icons color_purple">edit</mat-icon>
             </button>
             <button type='button'>

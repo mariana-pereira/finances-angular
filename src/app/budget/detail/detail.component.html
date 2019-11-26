@@ -12,7 +12,7 @@
                 <strong>{{budget.name}}</strong>
                 <p>{{budget.amount}}</p>
                 <div>
-                    <button class='action' type='button'>
+                    <button class='action' type='button' (click)="onEdit(budget.id)">
                         <mat-icon class="material-icons color_purple">edit</mat-icon>
                     </button>
                     <button class="action" type='button'>

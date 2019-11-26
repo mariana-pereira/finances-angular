@@ -21,4 +21,8 @@ export class CardService {
   show(id) {
     return this.http.get(`${this.url}/${id}`);
   }
+
+  update(card, id) {
+    return this.http.put(`${this.url}/${id}`, card);
+  }
 }

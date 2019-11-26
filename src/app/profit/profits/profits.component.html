@@ -1,28 +1,28 @@
 <div class="container">
-        <div class="content">
-            <div class="title">
-                <h1>Rendimentos</h1>
-            </div>
-            <div *ngIf='profits !== null' class="table">
-                <div class="header">
-                    <div class="item">Data</div>
-                    <div class="amount">Valor</div>
-                    <div class="icon"></div>
-                </div>
-                <div *ngFor='let profit of profits' class="tile">
-                    <div class="item">{{formatDate(profit.date)}}</div>
-                    <div class="amount">{{profit.amount}}</div>
-                    <div class="icon">
-                        <button class="icon-button">
-                            <mat-icon class="material-icons color_purple">delete</mat-icon>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <footer>
-                <div>
-                    <h4>{{total}}</h4>
-                </div>
-            </footer>
+    <div class="content">
+        <div class="title">
+            <h1>Rendimentos</h1>
         </div>
+        <div *ngIf='profits !== null' class="table">
+            <div class="header">
+                <div class="item">Data</div>
+                <div class="amount">Valor</div>
+                <div class="icon"></div>
+            </div>
+            <div *ngFor='let profit of profits' class="tile">
+                <div class="item">{{formatDate(profit.date)}}</div>
+                <div class="amount">{{profit.amount}}</div>
+                <div class="icon">
+                    <button class="icon-button">
+                        <mat-icon class="material-icons color_purple">delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>
+                <h4>{{total}}</h4>
+            </div>
+        </footer>
     </div>
+</div>

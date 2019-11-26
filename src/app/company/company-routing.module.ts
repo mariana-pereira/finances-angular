@@ -7,7 +7,8 @@ import { AddComponent } from './add/add.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'companies' },
   { path: 'companies', component: CompaniesComponent },
-  { path: 'add', component: AddComponent }
+  { path: 'add', component: AddComponent },
+  { path: 'edit/:id', component: AddComponent }
 ];
 
 @NgModule({

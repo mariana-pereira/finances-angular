@@ -10,10 +10,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.module';
 import { MatDatepickerModule } from '@angular/material';
 import { StatsComponent } from './stats/stats.component';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
-  declarations: [MovimentationsComponent, DetailComponent, AddIncomeComponent, AddOutcomeComponent, StatsComponent],
+  declarations: [MovimentationsComponent, DetailComponent, AddIncomeComponent, AddOutcomeComponent, StatsComponent, EditComponent],
   imports: [
     CommonModule,
     MovimentationRoutingModule,
