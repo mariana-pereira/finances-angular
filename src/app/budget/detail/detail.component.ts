@@ -26,10 +26,10 @@ export class DetailComponent implements OnInit {
 
     this.year = this.route.snapshot.paramMap.get("year");
 
-    this.budgetService.index(this.month, this.year).subscribe((data: any[])=>{
+    this.budgetService.index(this.month, this.year).subscribe((data: any[]) => {
       this.budgets = (data as any).budgets;
       this.total = (data as any).total;
-    })  
+    })
   }
 
   navigate() {
@@ -42,13 +42,28 @@ export class DetailComponent implements OnInit {
 
   formatDate() {
     var monthNames = [
-        "Janeiro", "Fevereiro", "Março",
-        "Abril", "Maio", "Junho", "Julho",
-        "Agosto", "Setembro", "Outubro",
-        "Novembro", "Dezembro"
+      "Janeiro", "Fevereiro", "Março",
+      "Abril", "Maio", "Junho", "Julho",
+      "Agosto", "Setembro", "Outubro",
+      "Novembro", "Dezembro"
     ];
-    return monthNames[this.month -1];
+    return monthNames[this.month - 1];
 
-}
+  }
+
+  deleteItem(id) {
+    if (window.confirm('Are you sure you wish to delete this item?')) {
+      this.budgetService.delete(id).subscribe(
+        (data) => {
+          console.log(data);
+        },
+        (err) => {
+          console.log(err);
+        }
+
+      );
+    }
+
+  }
 
 }

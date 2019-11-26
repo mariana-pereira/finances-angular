@@ -13,7 +13,7 @@
             <button type='button' (click)="navigate('expense/edit/' + expense.id)">
                 <mat-icon class="material-icons color_purple">edit</mat-icon>
             </button>
-            <button type='button'>
+            <button type='button' (click)="deleteItem(expense.id)">
                 <mat-icon class="material-icons color_purple">delete</mat-icon>
             </button>
         </div>

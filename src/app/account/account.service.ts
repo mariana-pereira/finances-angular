@@ -25,4 +25,8 @@ export class AccountService {
   update(account, id) {
     return this.http.put(`${this.url}/${id}`, account);
   }
+
+  delete(id) {
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }

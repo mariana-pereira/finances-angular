@@ -11,7 +11,7 @@
                 <button type='button' (click)="navigate('/company/edit/' + company.id)">
                     <mat-icon class="material-icons color_purple">edit</mat-icon>
                 </button>
-              <button type='button' >
+              <button type='button' (click)="deleteItem(company.id)">
                 <mat-icon class="material-icons color_purple">delete</mat-icon>
               </button>
             </div>

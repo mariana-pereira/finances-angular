@@ -46,12 +46,23 @@ export class ItemsComponent implements OnInit {
 
       );
 
-      this.itemForm.reset();
+    this.itemForm.reset();
 
-    this.itemService.index(this.id).subscribe((data: any[]) => {
-      this.items = (data as any).items
-      this.total = (data as any).total
-    })
+  }
+
+  deleteItem(id) {
+    if (window.confirm('Are you sure you wish to delete this item?')) {
+      this.itemService.delete(id).subscribe(
+        (data) => {
+          console.log(data);
+        },
+        (err) => {
+          console.log(err);
+        }
+
+      );
+    }
+
   }
 
 }

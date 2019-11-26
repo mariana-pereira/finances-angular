@@ -33,4 +33,19 @@ export class ProfitsComponent implements OnInit {
     return formatedDate.toLocaleDateString();
   }
 
+  deleteItem(id, investment) {
+    if (window.confirm('Are you sure you wish to delete this item?')) {
+      this.profitService.delete(id, investment.toString()).subscribe(
+          (data) => {
+            console.log(data);
+          },
+          (err) => {
+            console.log(err);
+          }
+
+        );
+    }
+    
+  }
+
 }

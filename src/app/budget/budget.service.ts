@@ -36,4 +36,8 @@ export class BudgetService {
   update(budget, id) {
     return this.http.put(`${this.url}/${id}`, budget);
   }
+
+  delete(id) {
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }

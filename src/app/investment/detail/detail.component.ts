@@ -35,4 +35,21 @@ export class DetailComponent implements OnInit {
     return formatedDate.toLocaleDateString();
   }
 
+  deleteItem(id) {
+    if (window.confirm('Are you sure you wish to delete this item?')) {
+      this.investmentService.delete(id).subscribe(
+          (data) => {
+            console.log(data);
+          },
+          (err) => {
+            console.log(err);
+          }
+
+        );
+  
+      this.navigate('/investment/investments');
+    }
+    
+  }
+
 }

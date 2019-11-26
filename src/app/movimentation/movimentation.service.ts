@@ -55,6 +55,13 @@ export class MovimentationService {
     return this.http.put(`${this.url}/${id}`, movimentation, {headers});
   }
 
+  delete(id, account) {
+    const headers = new HttpHeaders()
+            .set("account_id", account);
+
+    return this.http.delete(`${this.url}/${id}`, {headers})
+  }
+
   categoryMonth(month, year) {
     const headers = new HttpHeaders()
       .set("month", month)

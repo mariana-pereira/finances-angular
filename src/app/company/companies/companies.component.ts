@@ -18,13 +18,28 @@ export class CompaniesComponent implements OnInit {
 
   ngOnInit() {
 
-    this.companyService.index().subscribe((data: any[])=>{
+    this.companyService.index().subscribe((data: any[]) => {
       this.companies = data;
-    })  
+    })
   }
 
   navigate(route) {
     this.router.navigate([route]);
+  }
+
+  deleteItem(id) {
+    if (window.confirm('Are you sure you wish to delete this item?')) {
+      this.companyService.delete(id).subscribe(
+        (data) => {
+          console.log(data);
+        },
+        (err) => {
+          console.log(err);
+        }
+
+      );
+    }
+
   }
 
 }

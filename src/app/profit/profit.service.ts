@@ -23,4 +23,11 @@ export class ProfitService {
 
     return this.http.get(this.url, { headers });
   }
+
+  delete(id, investment) {
+    const headers = new HttpHeaders()
+    .set("investment_id", investment)
+
+    return this.http.delete(`${this.url}/${id}`, {headers});
+  }
 }

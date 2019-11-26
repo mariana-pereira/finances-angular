@@ -14,7 +14,7 @@ export class DetailComponent implements OnInit {
     private accountService: AccountService,
     private route: ActivatedRoute,
     private router: Router
-    ) { }
+  ) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get("id");
@@ -26,6 +26,23 @@ export class DetailComponent implements OnInit {
 
   navigate(route) {
     this.router.navigate([route]);
+  }
+
+  deleteItem(id) {
+    if (window.confirm('Are you sure you wish to delete this item?')) {
+      this.accountService.delete(id).subscribe(
+          (data) => {
+            console.log(data);
+          },
+          (err) => {
+            console.log(err);
+          }
+
+        );
+  
+      this.navigate('/account/accounts');
+    }
+    
   }
 
 }

@@ -25,4 +25,8 @@ export class CardService {
   update(card, id) {
     return this.http.put(`${this.url}/${id}`, card);
   }
+
+  delete(id) {
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }

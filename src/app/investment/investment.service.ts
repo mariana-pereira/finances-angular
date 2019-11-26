@@ -31,4 +31,8 @@ export class InvestmentService {
             
     return this.http.put(`${this.url}/${id}`, investment, {headers});
   }
+
+  delete(id) {
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }

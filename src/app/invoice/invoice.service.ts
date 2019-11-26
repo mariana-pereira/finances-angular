@@ -40,4 +40,8 @@ export class InvoiceService {
     return this.http.get(`${this.url}/card`, { headers });
   }
 
+  delete(id) {
+    return this.http.delete(`${this.url}/${id}`);
+  }
+
 }

@@ -13,7 +13,7 @@
                 <div class="item">{{formatDate(profit.date)}}</div>
                 <div class="amount">{{profit.amount}}</div>
                 <div class="icon">
-                    <button class="icon-button">
+                    <button class="icon-button" (click)="deleteItem(profit.id, profit.investment_id)">
                         <mat-icon class="material-icons color_purple">delete</mat-icon>
                     </button>
                 </div>

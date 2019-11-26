@@ -23,4 +23,8 @@ export class ItemService {
 
     return this.http.get(this.url, { headers });
   }
+
+  delete(id) {
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }

@@ -26,4 +26,8 @@ export class TargetService {
   update(target, id) {
     return this.http.put(`${this.url}/${id}`, target);
   }
+
+  delete(id) {
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }

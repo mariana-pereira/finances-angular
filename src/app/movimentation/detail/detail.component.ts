@@ -35,4 +35,21 @@ export class DetailComponent implements OnInit {
     this.router.navigate([route]);
   }
 
+  deleteItem(id, account) {
+    if (window.confirm('Are you sure you wish to delete this item?')) {
+      this.movimentationService.delete(id, account.toString()).subscribe(
+          (data) => {
+            console.log(data);
+          },
+          (err) => {
+            console.log(err);
+          }
+
+        );
+  
+      this.navigate('/movimentation/movimentations');
+    }
+    
+  }
+
 }

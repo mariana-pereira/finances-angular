@@ -47,6 +47,10 @@ export class ExpenseService {
     return this.http.put(`${this.url}/${id}`, expense);
   }
 
+  delete(id) {
+    return this.http.delete(`${this.url}/${id}`);
+  }
+
   categoryMonth(month, year) {
     const headers = new HttpHeaders()
       .set("month", month)
