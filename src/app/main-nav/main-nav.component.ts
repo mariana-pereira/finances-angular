@@ -34,4 +34,9 @@ export class MainNavComponent {
     return this.authService.isAuthenticated();
   }
 
+  logout() {
+    this.navigate('/auth/login');
+    return this.authService.logout()
+  }
+
 }

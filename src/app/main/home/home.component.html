@@ -1,0 +1,120 @@
+<div class="container">
+    <div class="content">
+        <div class="card-container">
+            <div class="card" (click)="navigate('/account/accounts')">
+                <mat-icon class="material-icons color_purple">attach_money</mat-icon>
+                <h1>{{account}}</h1>
+                <p>Saldo em conta</p>
+            </div>
+            <div class="card" (click)="navigate('/investment/investments')">
+                <mat-icon class="material-icons color_purple">monetization_on</mat-icon>
+                <h1>{{investment}}</h1>
+                <p>Saldo investido</p>
+            </div>
+            <div class="card" (click)="navigate('/invoice/invoices')">
+                <mat-icon class="material-icons color_purple">description</mat-icon>
+                <h1>{{invoice}}</h1>
+                <p>Total de faturas</p>
+            </div>
+        </div>
+        <div class="tile-container">
+            <h1>Entradas</h1>
+            <div class="table">
+                <div class="header-tile">
+                    <div>
+                        <span>Data</span>
+                    </div>
+                    <div>
+                        <span>Valor</span>
+                    </div>
+                    <div>
+                        <span>Categoria</span>
+                    </div>
+                    <div>
+                        <span>Conta</span>
+                    </div>
+                </div>
+                <div *ngFor="let income of incomes" class="tile">
+                    <div>
+                        <span>{{formatDate(income?.date)}}</span>
+                    </div>
+                    <div>
+                        <span>{{income?.amount}}</span>
+                    </div>
+                    <div>
+                        <span>{{income?.category}}</span>
+                    </div>
+                    <div>
+                        <span>{{income?.account.bank}}</span>
+                    </div>
+                </div>
+            </div>
+            <h1>Saídas</h1>
+            <div class="table">
+                <div class="header-tile">
+                    <div>
+                        <span>Data</span>
+                    </div>
+                    <div>
+                        <span>Valor</span>
+                    </div>
+                    <div>
+                        <span>Categoria</span>
+                    </div>
+                    <div>
+                        <span>Conta</span>
+                    </div>
+                </div>
+                <div *ngFor=" let outcome of outcomes" class="tile">
+                    <div>
+                        <span>{{formatDate(outcome?.date)}}</span>
+                    </div>
+                    <div>
+                        <span>{{outcome?.amount}}</span>
+                    </div>
+                    <div>
+                        <span>{{outcome?.category}}</span>
+                    </div>
+                    <div>
+                        <span>{{outcome?.account.bank}}</span>
+                    </div>
+                </div>
+            </div>
+            <h1>Despesas</h1>
+            <div class="table">
+                <div class="header-tile">
+                    <div>
+                        <span>Data</span>
+                    </div>
+                    <div>
+                        <span>Valor</span>
+                    </div>
+                    <div>
+                        <span>Loja</span>
+                    </div>
+                    <div>
+                        <span>Categoria</span>
+                    </div>
+                </div>
+                <div *ngFor="let expense of expenses" class="tile">
+                    <div>
+                        <span>{{formatDate(expense?.date)}}</span>
+                    </div>
+                    <div>
+                        <span>{{expense?.amount}}</span>
+                    </div>
+                    <div>
+                        <span>{{expense?.shop}}</span>
+                    </div>
+                    <div>
+                        <span>{{expense?.category}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loading-indicator">
+        <mat-progress-spinner *ngIf='isLoading' class="mat-spinner-color" [diameter]="50" mode="indeterminate"
+            value='50'></mat-progress-spinner>
+    </div>
+</div>

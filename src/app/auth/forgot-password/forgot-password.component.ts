@@ -18,6 +18,9 @@ export class ForgotPasswordComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+    if(this.authService.isAuthenticated()) {
+      this.router.navigateByUrl('/main');
+    } 
   }
 
   onSubmit() {

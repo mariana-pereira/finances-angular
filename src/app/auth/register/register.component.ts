@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     if(this.authService.isAuthenticated()) {
-      this.router.navigateByUrl('/account/accounts');
+      this.router.navigateByUrl('/main');
     }
   }
 
@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
     this.authService.register(user)
     .subscribe(
       (user) => {
-        this.router.navigateByUrl('/account/accounts');
+        this.router.navigateByUrl('/main');
       },
       (err) => {
         console.log(err);

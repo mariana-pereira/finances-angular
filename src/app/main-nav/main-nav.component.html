@@ -7,7 +7,7 @@
     <mat-nav-list>
       <div class='nav-item'>
         <mat-icon class="material-icons color_purple">home</mat-icon>
-            <button >
+            <button (click)="navigate('/main/home')">
                 Home
             </button>
     </div>
@@ -43,7 +43,7 @@
     </div>
     <div class='nav-item'>
       <mat-icon class="material-icons color_purple">swap_horiz</mat-icon>
-        <button >
+        <button (click)="navigate('/movimentation/transfer')">
             Transferir
         </button>
     </div>
@@ -73,7 +73,7 @@
     </div>
     <div class='nav-item'>
       <mat-icon class="material-icons color_purple">power_settings_new</mat-icon>
-        <button >
+        <button (click)="logout()">
             Logout
         </button>
     </div>

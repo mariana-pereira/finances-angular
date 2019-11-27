@@ -40,6 +40,13 @@ export class InvoiceService {
     return this.http.get(`${this.url}/card`, { headers });
   }
 
+  month(month, year) {
+    const headers = new HttpHeaders()
+      .set("month", month)
+      .set('year', year)
+    return this.http.get(`${this.url}/dashboard`, { headers });
+  }
+
   delete(id) {
     return this.http.delete(`${this.url}/${id}`);
   }

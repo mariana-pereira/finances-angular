@@ -45,6 +45,22 @@ export class MovimentationService {
     return this.http.get(`${this.url}/month`, {headers});
   }
 
+  monthIncome(month, year) {
+    const headers = new HttpHeaders()
+            .set("month", month)
+            .set("year", year);
+
+    return this.http.get(`${this.url}/income/month`, {headers});
+  }
+
+  monthOutcome(month, year) {
+    const headers = new HttpHeaders()
+            .set("month", month)
+            .set("year", year);
+
+    return this.http.get(`${this.url}/outcome/month`, {headers});
+  }
+
   year(year) {
     const headers = new HttpHeaders()
             .set("year", year);

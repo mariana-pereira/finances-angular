@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
 
     if(this.authService.isAuthenticated()) {
-      this.router.navigateByUrl('/account/accounts');
+      this.router.navigateByUrl('/main');
     } 
   }
 
@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
     .subscribe(
       (data) => {
         this.isLoading = false;
-        this.router.navigateByUrl('/account/accounts');
+        this.router.navigateByUrl('/main');
       },
       (err) => {
         console.log(err);
