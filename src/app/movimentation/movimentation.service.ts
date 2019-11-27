@@ -25,6 +25,14 @@ export class MovimentationService {
     return this.http.post(`${this.url}/outcome`, movimentation, {headers});
   }
 
+  transfer(movimentation, origin, target) {
+    const headers = new HttpHeaders()
+            .set("origin_id", origin)
+            .set("target_id", target);
+
+    return this.http.post(`${this.url}/transfer`, movimentation, {headers});
+  }
+
   index() {
     return this.http.get(this.url);
   }

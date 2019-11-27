@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="content">
+        <div class="header">
+            <h1>Transferir</h1>
+        </div>
+        <div class="transfer-box">
+            <div class="box">
+                <select name='origin' (change)="handleOrigin($event.target.value)">
+                        <option value="">Origem</option>
+                    <option *ngFor='let account of accounts' [value]='account.id'>{{account.bank}}</option>
+                </select>
+                <select name='target' (change)="handleTarget($event.target.value)">
+                        <option value="">Destino</option>
+                    <option *ngFor='let account of accounts' [value]='account.id'>{{account.bank}}</option>
+                </select>
+            </div>
+            <div class="box">
+                <div class="account-container">
+                    <div class="title">Banco {{origin?.bank}}</div>
+                    <div class="type">{{origin?.type}}</div>
+                    <div class="amount">
+                        <span>Saldo em conta:</span>
+                        <span>{{origin?.account_balance}}</span>
+                    </div>
+                    <div class="amount">
+                        <span>Saldo investido:</span>
+                        <span>{{origin?.investments_balance}}</span>
+                    </div>
+                </div>
+                <div class="account-container">
+                    <div class="title">Banco {{target?.bank}}</div>
+                    <div class="type">{{target?.type}}</div>
+                    <div class="amount">
+                        <span>Saldo em conta:</span>
+                        <span>{{target?.account_balance}}</span>
+                    </div>
+                    <div class="amount">
+                        <span>Saldo investido:</span>
+                        <span>{{target?.investments_balance}}</span>
+                    </div>
+                </div>
+            </div>
+            <form [formGroup]='movimentationForm' (ngSubmit)="onSubmit()">
+                <input type='text' name='amount' placeholder='valor' formControlName='amount' />
+                <button type='submit'>Transferir</button>
+            </form>
+        </div>
+    </div>
+</div>

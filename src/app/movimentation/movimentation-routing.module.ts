@@ -6,6 +6,7 @@ import { AddIncomeComponent } from './add-income/add-income.component';
 import { AddOutcomeComponent } from './add-outcome/add-outcome.component';
 import { StatsComponent } from './stats/stats.component';
 import { EditComponent } from './edit/edit.component';
+import { TransferComponent } from './transfer/transfer.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'add/income/:id', component: AddIncomeComponent },
   { path: 'add/outcome/:id', component: AddOutcomeComponent },
   { path: 'edit/:id', component: EditComponent },
-  { path: 'stats', component: StatsComponent }
+  { path: 'stats', component: StatsComponent },
+  { path: 'transfer', component: TransferComponent }
 ];
 
 @NgModule({

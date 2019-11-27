@@ -11,10 +11,11 @@ import { MaterialModule } from '../material.module';
 import { MatDatepickerModule } from '@angular/material';
 import { StatsComponent } from './stats/stats.component';
 import { EditComponent } from './edit/edit.component';
+import { TransferComponent } from './transfer/transfer.component';
 
 
 @NgModule({
-  declarations: [MovimentationsComponent, DetailComponent, AddIncomeComponent, AddOutcomeComponent, StatsComponent, EditComponent],
+  declarations: [MovimentationsComponent, DetailComponent, AddIncomeComponent, AddOutcomeComponent, StatsComponent, EditComponent, TransferComponent],
   imports: [
     CommonModule,
     MovimentationRoutingModule,

@@ -1,0 +1,102 @@
+<mat-sidenav-container *ngIf="isAuthenticated(); else authtemplate" class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar style="color: #fff;">finances</mat-toolbar>
+    <mat-nav-list>
+      <div class='nav-item'>
+        <mat-icon class="material-icons color_purple">home</mat-icon>
+            <button >
+                Home
+            </button>
+    </div>
+    <div class='nav-item'>
+      <mat-icon class="material-icons color_purple">account_balance</mat-icon>
+            <button (click)="navigate('/account/accounts')">
+                Contas
+            </button>
+    </div>
+    <div class='nav-item'>
+      <mat-icon class="material-icons color_purple">credit_card</mat-icon>
+            <button (click)="navigate('/card/cards')">
+                Cartões
+            </button>
+    </div>
+    <div class='nav-item'>
+      <mat-icon class="material-icons color_purple">description</mat-icon>
+            <button (click)="navigate('/invoice/invoices')">
+                Faturas
+            </button>
+    </div>
+    <div class='nav-item'>
+      <mat-icon class="material-icons color_purple">receipt</mat-icon>
+        <button (click)="navigate('/movimentation/movimentations')">
+            Extrato
+        </button>
+    </div>
+    <div class='nav-item'>
+      <mat-icon class="material-icons color_purple">attach_money</mat-icon>
+        <button (click)="navigate('/expense/expenses')">
+            Despesas
+        </button>
+    </div>
+    <div class='nav-item'>
+      <mat-icon class="material-icons color_purple">swap_horiz</mat-icon>
+        <button >
+            Transferir
+        </button>
+    </div>
+    <div class='nav-item'>
+      <mat-icon class="material-icons color_purple">list</mat-icon>
+        <button (click)="navigate('/budget/budgets')">
+            Budget
+        </button>
+    </div>
+    <div class='nav-item'>
+      <mat-icon class="material-icons color_purple">my_location</mat-icon>
+            <button (click)="navigate('/target/targets')">
+                Objetivos
+            </button>
+    </div>
+    <div class='nav-item'>
+      <mat-icon class="material-icons color_purple">trending_up</mat-icon>
+            <button (click)="navigate('/investment/investments')">
+                Investimentos
+            </button>
+    </div>
+    <div class='nav-item'>
+      <mat-icon class="material-icons color_purple">business</mat-icon>
+        <button (click)="navigate('/company/companies')">
+            Empresas
+        </button>
+    </div>
+    <div class='nav-item'>
+      <mat-icon class="material-icons color_purple">power_settings_new</mat-icon>
+        <button >
+            Logout
+        </button>
+    </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="title">finances</span>
+    </mat-toolbar>
+    <ng-content>
+
+    </ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<ng-template #authtemplate>
+  <router-outlet></router-outlet>
+</ng-template>
