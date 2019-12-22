@@ -54,7 +54,7 @@ export class AddComponent implements OnInit {
   onSubmit() {
     if (this.id !== null) {
       const invoice = this.invoiceForm.value;
-      this.invoiceService.update(invoice, this.id)
+      this.invoiceService.update(invoice, this.card_id)
         .subscribe(
           (data) => {
             console.log(data);

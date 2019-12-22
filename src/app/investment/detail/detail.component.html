@@ -16,7 +16,7 @@
                 <button type='button' (click)="navigate('/investment/edit/' + investment.id)">
                     <mat-icon class="material-icons color_purple">edit</mat-icon>
                 </button>
-                <button type='button' (click)="deleteItem(investment.id)">
+                <button type='button' (click)="deleteItem(investment.id, investment.account_id, investment.target_id)">
                     <mat-icon class="material-icons color_purple">delete</mat-icon>
                 </button>
             </div>

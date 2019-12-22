@@ -31,11 +31,11 @@ export class DetailComponent implements OnInit {
     return formatedDate.toLocaleDateString();
   }
 
-  handlePay(id) {
-    this.invoiceService.pay(id).subscribe((data: any) => {
+  handlePay(id, card) {
+    this.invoiceService.pay(id, card.toString()).subscribe((data: any) => {
       console.log(data);
     })
-
+    this.navigate('/invoice/invoices');
   }
 
   navigate(route) {

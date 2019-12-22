@@ -15,7 +15,7 @@
                 <mat-icon class="material-icons color_purple">delete</mat-icon>
             </button>
         </div>
-        <div *ngIf='invoice?.paid === false' class="button-container" (click)='handlePay(invoice.id)'>
+        <div *ngIf='invoice?.paid === false' class="button-container" (click)='handlePay(invoice.id, invoice.card_id)'>
             <button>Pagar</button>
         </div>
         <div class="card-container">

@@ -35,9 +35,9 @@ export class DetailComponent implements OnInit {
     return formatedDate.toLocaleDateString();
   }
 
-  deleteItem(id) {
+  deleteItem(id, account, target) {
     if (window.confirm('Are you sure you wish to delete this item?')) {
-      this.investmentService.delete(id).subscribe(
+      this.investmentService.delete(id, account.toString(), target.toString()).subscribe(
           (data) => {
             console.log(data);
           },

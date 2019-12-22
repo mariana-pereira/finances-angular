@@ -32,7 +32,10 @@ export class InvestmentService {
     return this.http.put(`${this.url}/${id}`, investment, {headers});
   }
 
-  delete(id) {
-    return this.http.delete(`${this.url}/${id}`);
+  delete(id, account, target) {
+    const headers = new HttpHeaders()
+            .set("account_id", account)
+            .set("target_id", target);
+    return this.http.delete(`${this.url}/${id}`, {headers});
   }
 }

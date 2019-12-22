@@ -17,8 +17,11 @@ export class InvoiceService {
     return this.http.post(this.url, invoice, { headers });
   }
 
-  pay(id) {
-    return this.http.put(`${this.url}/dashboard/${id}`, {});
+  pay(id, card) {
+    const headers = new HttpHeaders()
+      .set("card_id", card)
+
+    return this.http.put(`${this.url}/dashboard/${id}`, {}, {headers});
   }
 
   index() {
