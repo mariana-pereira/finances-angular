@@ -38,4 +38,11 @@ export class InvestmentService {
             .set("target_id", target);
     return this.http.delete(`${this.url}/${id}`, {headers});
   }
+
+  redeem(id, account, target) {
+    const headers = new HttpHeaders()
+            .set("account_id", account)
+            .set("target_id", target);
+    return this.http.delete(`${this.url}/redeem/${id}`, {headers});
+  }
 }

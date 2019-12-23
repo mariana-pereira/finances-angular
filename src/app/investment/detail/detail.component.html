@@ -20,6 +20,9 @@
                     <mat-icon class="material-icons color_purple">delete</mat-icon>
                 </button>
             </div>
+            <div class="button-container" (click)="redeem(investment.id, investment.account_id, investment.target_id)">
+                <button>Resgatar investimento</button>
+            </div>
             <div class="card-container">
                 <div class="card" (click)="navigate('/profit/add/' + investment.id)">
                         <mat-icon class="material-icons color_purple">add</mat-icon>

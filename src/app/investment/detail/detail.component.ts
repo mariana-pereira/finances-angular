@@ -52,4 +52,21 @@ export class DetailComponent implements OnInit {
     
   }
 
+  redeem(id, account, target) {
+    if (window.confirm('Confirmar resgate do investimento?')) {
+      this.investmentService.redeem(id, account.toString(), target.toString()).subscribe(
+          (data) => {
+            console.log(data);
+          },
+          (err) => {
+            console.log(err);
+          }
+
+        );
+  
+      this.navigate('/investment/investments');
+    }
+    
+  }
+
 }
