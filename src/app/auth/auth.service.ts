@@ -13,7 +13,12 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   register(user) {
-    return this.http.post(`${this.url}/register`, user);
+    return this.http.post<{user: {}, token: string}>(`${this.url}/register`, user)
+    .pipe(
+      map((res) => {
+        localStorage.setItem('token', res.token);
+      })
+    )
   }
 
   login(credentials) {

@@ -5,8 +5,8 @@
 
             <input type='text' name='name' placeholder='nome' formControlName='name' />
             <input type='text' name='number' placeholder='número' formControlName='number' />
-            <input type='text' name='totalLimit' placeholder='limite total' formControlName='total_limit' />
-            <input type='text' name='availableLimit' placeholder='limite disponível'
+            <input currencyMask type='text' name='totalLimit' placeholder='limite total' [options]="{ prefix: '', align: 'left', thousands: '.', decimal: ',' }" formControlName='total_limit' />
+            <input currencyMask type='text' name='availableLimit' placeholder='limite disponível' [options]="{ prefix: '', align: 'left', thousands: '.', decimal: ',' }"
                 formControlName='available_limit' />
             <div class="date">
                 <input matInput [matDatepicker]="picker" placeholder="vencimento" formControlName='expiry_date'>

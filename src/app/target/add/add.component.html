@@ -4,8 +4,8 @@
         <form [formGroup]='targetForm' (ngSubmit)="onSubmit()">
 
             <input type='text' name='name' placeholder='nome' formControlName='name' />
-            <input type='text' name='necessaryAmount' placeholder='valor necessário'
-                formControlName='necessary_amount' />
+            <input currencyMask type='text' name='necessaryAmount' placeholder='valor necessário'
+            [options]="{ prefix: '', align: 'left', thousands: '.', decimal: ',' }" formControlName='necessary_amount' />
             <div class="date">
                 <input class='date' matInput [matDatepicker]="picker" placeholder="vencimento"
                     formControlName='deadline'>

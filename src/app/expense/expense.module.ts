@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.module';
 import { StatsComponent } from './stats/stats.component';
 import { InvoiceExpensesComponent } from './invoice-expenses/invoice-expenses.component';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { InvoiceExpensesComponent } from './invoice-expenses/invoice-expenses.co
     MatDatepickerModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    CurrencyMaskModule
   ]
 })
 export class ExpenseModule { }

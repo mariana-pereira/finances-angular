@@ -4,7 +4,7 @@
         <form [formGroup]='budgetForm' (ngSubmit)="onSubmit()">
 
             <input type='text' name='name' placeholder='nome' formControlName='name' />
-            <input type='text' name='amount' placeholder='valor' formControlName='amount' />
+            <input currencyMask name='amount' placeholder='valor' [options]="{ prefix: '', align: 'left', thousands: '.', decimal: ',' }" formControlName='amount' />
             
             <div class="button-container">
                 <button type="button" (click)="onCancel()">Cancelar</button>

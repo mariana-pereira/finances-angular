@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material';
 import { DetailComponent } from './detail/detail.component';
 import { MaterialModule } from '../material.module';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MaterialModule } from '../material.module';
     FormsModule,
     ReactiveFormsModule,
     MatNativeDateModule,
-    MaterialModule
+    MaterialModule,
+    CurrencyMaskModule
   ]
 })
 export class CardModule { }

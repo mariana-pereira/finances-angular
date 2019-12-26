@@ -26,6 +26,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MainModule } from './main/main.module';
+import { NgxMaskModule } from 'ngx-mask';
+import { CurrencyMaskModule } from "ng2-currency-mask";
 
 
 @NgModule({
@@ -56,7 +58,9 @@ import { MainModule } from './main/main.module';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MainModule
+    MainModule,
+    NgxMaskModule,
+    CurrencyMaskModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

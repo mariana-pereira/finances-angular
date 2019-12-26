@@ -8,6 +8,8 @@ import { MatDatepickerModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.module';
 import { AddComponent } from './add/add.component';
+import { NgxMaskModule } from 'ngx-mask';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { AddComponent } from './add/add.component';
     MatDatepickerModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    NgxMaskModule.forRoot(),
+    CurrencyMaskModule
   ]
 })
 export class BudgetModule { }

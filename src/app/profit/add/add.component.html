@@ -9,7 +9,7 @@
                     </mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </div>
-                <input type='text' name='amount' placeholder='valor' formControlName='amount' />
+                <input currencyMask type='text' name='amount' placeholder='valor' [options]="{ prefix: '', align: 'left', thousands: '.', decimal: ',' }" formControlName='amount' />
                 <div class="button-container">
                     <button type="button" (click)="onCancel()">Cancelar</button>
                     <button type="submit">Salvar</button>

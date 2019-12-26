@@ -12,6 +12,7 @@ import { MatDatepickerModule } from '@angular/material';
 import { StatsComponent } from './stats/stats.component';
 import { EditComponent } from './edit/edit.component';
 import { TransferComponent } from './transfer/transfer.component';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { TransferComponent } from './transfer/transfer.component';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    CurrencyMaskModule
   ]
 })
 export class MovimentationModule { }
