@@ -20,11 +20,11 @@
                     <div class="type">{{origin?.type}}</div>
                     <div class="amount">
                         <span>Saldo em conta:</span>
-                        <span>{{origin?.account_balance}}</span>
+                        <span>{{convertCurrency(origin?.account_balance)}}</span>
                     </div>
                     <div class="amount">
                         <span>Saldo investido:</span>
-                        <span>{{origin?.investments_balance}}</span>
+                        <span>{{convertCurrency(origin?.investments_balance)}}</span>
                     </div>
                 </div>
                 <div class="account-container">
@@ -32,16 +32,16 @@
                     <div class="type">{{target?.type}}</div>
                     <div class="amount">
                         <span>Saldo em conta:</span>
-                        <span>{{target?.account_balance}}</span>
+                        <span>{{convertCurrency(target?.account_balance)}}</span>
                     </div>
                     <div class="amount">
                         <span>Saldo investido:</span>
-                        <span>{{target?.investments_balance}}</span>
+                        <span>{{convertCurrency(target?.investments_balance)}}</span>
                     </div>
                 </div>
             </div>
             <form [formGroup]='movimentationForm' (ngSubmit)="onSubmit()">
-                <input type='text' name='amount' placeholder='valor' formControlName='amount' />
+                <input currencyMask type='text' name='amount' placeholder='valor' [options]="{ prefix: '', align: 'left', thousands: '.', decimal: ',' }" formControlName='amount' />
                 <button type='submit'>Transferir</button>
             </form>
         </div>

@@ -6,7 +6,7 @@
             <h4>{{movimentation.type}}</h4>
             <h4>{{movimentation.category}}</h4>
             <h4>Conta: {{movimentation.account.bank}}</h4>
-            <p>Valor: {{movimentation.amount}}</p>
+            <p>Valor: {{convertCurrency(movimentation.amount)}}</p>
         </div>
         <div class="action">
             <button type='button' (click)="navigate('movimentation/edit/' + movimentation.id)">

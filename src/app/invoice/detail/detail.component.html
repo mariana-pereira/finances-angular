@@ -5,7 +5,7 @@
             <h1>{{invoice.name}}</h1>
             <h4>{{invoice.month}} {{invoice.year}}</h4>
             <h4>{{formatDate(invoice.expiry_date)}}</h4>
-            <p>Valor: {{invoice.invoice_amount}}</p>
+            <p>Valor: {{convertCurrency(invoice.invoice_amount)}}</p>
         </div>
         <div class="action">
             <button type='button' (click)="navigate('invoice/edit/' + invoice.id )">

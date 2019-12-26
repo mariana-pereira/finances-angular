@@ -8,8 +8,8 @@
                 <span class="title">{{card.name}}</span>
                 <span class="type">{{card.number}}</span>
                 <div class="amount">
-                    <span>Saldo em conta: {{card.total_limit}}</span>
-                    <span>Saldo investido: {{card.available_limit}}</span>
+                    <span>Limite total: {{convertCurrency(card.total_limit)}}</span>
+                    <span>Limite disponível: {{convertCurrency(card.available_limit)}}</span>
                 </div>
             </div>
         </div>

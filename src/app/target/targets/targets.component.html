@@ -8,8 +8,8 @@
                 <span class="title">{{target.name}}</span>
                 <span class="type">{{formatDate(target.deadline)}}</span>
                 <div class="amount">
-                    <span>Valor necessário: {{target.necessary_amount}}</span>
-                    <span>Valor atual: {{target.actual_amount}}</span>
+                    <span>Valor necessário: {{convertCurrency(target.necessary_amount)}}</span>
+                    <span>Valor atual: {{convertCurrency(target.actual_amount)}}</span>
                 </div>
             </div>
         </div>

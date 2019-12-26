@@ -6,11 +6,11 @@
         <div class="card-container">
             <div class="card">
                 <strong>Total</strong>
-                <p>{{total}}</p>
+                <p>{{convertCurrency(total)}}</p>
             </div>
             <div *ngFor='let budget of budgets' class="card">
                 <strong>{{budget.name}}</strong>
-                <p>{{budget.amount}}</p>
+                <p>{{convertCurrency(budget.amount)}}</p>
                 <div>
                     <button class='action' type='button' (click)="onEdit(budget.id)">
                         <mat-icon class="material-icons color_purple">edit</mat-icon>

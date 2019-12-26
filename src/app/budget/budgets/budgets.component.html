@@ -11,51 +11,51 @@
         <div *ngIf='year !== null' class="card-container">
             <div class="card" (click)="navigate('/budget/detail/' + year + '/1')">
                 <strong>Janeiro</strong>
-                <p>{{budget?.january}}</p>
+                <p>{{convertCurrency(budget?.january)}}</p>
             </div>
             <div class="card" (click)="navigate('/budget/detail/' + year + '/2')">
                 <strong>Fevereiro</strong>
-                <p>{{budget?.february}}</p>
+                <p>{{convertCurrency(budget?.february)}}</p>
             </div>
             <div class="card" (click)="navigate('/budget/detail/' + year + '/3')">
                 <strong>Março</strong>
-                <p>{{budget?.march}}</p>
+                <p>{{convertCurrency(budget?.march)}}</p>
             </div>
             <div class="card" (click)="navigate('/budget/detail/' + year + '/4')">
                 <strong>Abril</strong>
-                <p>{{budget?.april}}</p>
+                <p>{{convertCurrency(budget?.april)}}</p>
             </div>
             <div class="card" (click)="navigate('/budget/detail/' + year + '/5')">
                 <strong>Maio</strong>
-                <p>{{budget?.may}}</p>
+                <p>{{convertCurrency(budget?.may)}}</p>
             </div>
             <div class="card" (click)="navigate('/budget/detail/' + year + '/6')">
                 <strong>Junho</strong>
-                <p>{{budget?.june}}</p>
+                <p>{{convertCurrency(budget?.june)}}</p>
             </div>
             <div class="card" (click)="navigate('/budget/detail/' + year + '/7')">
                 <strong>Julho</strong>
-                <p>{{budget?.july}}</p>
+                <p>{{convertCurrency(budget?.july)}}</p>
             </div>
             <div class="card" (click)="navigate('/budget/detail/' + year + '/8')">
                 <strong>Agosto</strong>
-                <p>{{budget?.august}}</p>
+                <p>{{convertCurrency(budget?.august)}}</p>
             </div>
             <div class="card" (click)="navigate('/budget/detail/' + year + '/9')">
                 <strong>Setembro</strong>
-                <p>{{budget?.september}}</p>
+                <p>{{convertCurrency(budget?.september)}}</p>
             </div>
             <div class="card" (click)="navigate('/budget/detail/' + year + '/10')">
                 <strong>Outubro</strong>
-                <p>{{budget?.october}}</p>
+                <p>{{convertCurrency(budget?.october)}}</p>
             </div>
             <div class="card" (click)="navigate('/budget/detail/' + year + '/11')">
                 <strong>Novembro</strong>
-                <p>{{budget?.november}}</p>
+                <p>{{convertCurrency(budget?.november)}}</p>
             </div>
             <div class="card" (click)="navigate('/budget/detail/' + year + '/12')">
                 <strong>Dezembro</strong>
-                <p>{{budget?.december}}</p>
+                <p>{{convertCurrency(budget?.december)}}</p>
             </div>
         </div>
     </div>

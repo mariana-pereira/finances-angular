@@ -9,7 +9,7 @@
                 <span class="type">{{invoice.card.name}}</span>
                 <div class="amount">
                     <span>Vencimento: {{formatDate(invoice.expiry_date)}}</span>
-                    <span>Valor: {{invoice.invoice_amount}}</span>
+                    <span>Valor: {{convertCurrency(invoice.invoice_amount)}}</span>
                 </div>
             </div>
         </div>

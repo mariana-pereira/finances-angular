@@ -6,8 +6,8 @@
             <h4>{{account.type}}</h4>
             <h4>Agência: {{account.branch}}</h4>
             <h4>Conta: {{account.account_number}}</h4>
-            <p>Saldo em conta: {{account.account_balance}}</p>
-            <p>Saldo investido: {{account.investments_balance}}</p>
+            <p>Saldo em conta: {{convertCurrency(account.account_balance)}}</p>
+            <p>Saldo investido: {{convertCurrency(account.investments_balance)}}</p>
         </div>
         <div class="action">
             <button type='button' (click)="navigate('/account/edit/' + account.id)">

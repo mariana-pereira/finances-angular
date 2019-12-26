@@ -39,7 +39,7 @@
                     <span>{{formatDate(expense.date)}}</span>
                 </div>
                 <div>
-                    <span>{{expense.amount}}</span>
+                    <span>{{convertCurrency(expense.amount)}}</span>
                 </div>
                 <div>
                     <span>{{expense.shop}}</span>
@@ -51,7 +51,7 @@
         </div>
         <footer class="footer">
             <div>
-                <h4> Total: {{total}}</h4>
+                <h4> Total: {{convertCurrency(total)}}</h4>
             </div>
         </footer>
     </div>

@@ -22,54 +22,54 @@
                 <div class="tile">
                     <mat-icon class="material-icons color_purple">attach_money</mat-icon>
                     <span class='name'>Bonificação</span>
-                    <span class='amount'>{{bonus}}</span>
+                    <span class='amount'>{{convertCurrency(bonus)}}</span>
                 </div>
                 <div class="tile">
                     <mat-icon class="material-icons color_purple">redeem</mat-icon>
                     <span class='name'>Cashback</span>
-                    <span class='amount'>{{cashback}}</span>
+                    <span class='amount'>{{convertCurrency(cashback)}}</span>
                 </div>
                 <div class="tile">
                     <mat-icon class="material-icons color_purple">note_add</mat-icon>
                     <span class='name'>Extra</span>
-                    <span class='amount'>{{extra}}</span>
+                    <span class='amount'>{{convertCurrency(extra)}}</span>
                 </div>
                 <div class="tile">
                     <mat-icon class="material-icons color_purple">monetization_on</mat-icon>
                     <span class='name'>Rendimentos</span>
-                    <span class='amount'>{{profit}}</span>
+                    <span class='amount'>{{convertCurrency(profit)}}</span>
                 </div>
                 <div class="tile">
                     <mat-icon class="material-icons color_purple">receipt</mat-icon>
                     <span class='name'>Salário</span>
-                    <span class='amount'>{{salary}}</span>
+                    <span class='amount'>{{convertCurrency(salary)}}</span>
                 </div>
                 <div class="tile">
                     <mat-icon class="material-icons color_purple">bubble_chart</mat-icon>
                     <span class='name'>Outros</span>
-                    <span class='amount'>{{other}}</span>
+                    <span class='amount'>{{convertCurrency(other)}}</span>
                 </div>
             </div>
             <div style="margin-top: 80px;">
                 <div class="tile">
                     <mat-icon class="material-icons color_purple">shopping_cart</mat-icon>
                     <span class='name'>Compras</span>
-                    <span class='amount'>{{shopping}}</span>
+                    <span class='amount'>{{convertCurrency(shopping)}}</span>
                 </div>
                 <div class="tile">
                     <mat-icon class="material-icons color_purple">assignment_turned_in</mat-icon>
                     <span class='name'>Pagamento de mensalidade</span>
-                    <span class='amount'>{{subscription}}</span>
+                    <span class='amount'>{{convertCurrency(subscription)}}</span>
                 </div>
                 <div class="tile">
                     <mat-icon class="material-icons color_purple">description</mat-icon>
                     <span class='name'>Pagamento de fatura</span>
-                    <span class='amount'>{{invoice}}</span>
+                    <span class='amount'>{{convertCurrency(invoice)}}</span>
                 </div>
                 <div class="tile">
                     <mat-icon class="material-icons color_purple">local_atm</mat-icon>
                     <span class='name'>Saque</span>
-                    <span class='amount'>{{withdrawal}}</span>
+                    <span class='amount'>{{convertCurrency(withdrawal)}}</span>
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
             <div *ngFor="let movimentation of movimentations" class="tile">
                 <mat-icon class="material-icons color_purple">business</mat-icon>
                 <span class='name'>{{movimentation.company.name}}</span>
-                <span class='amount'>{{movimentation.total}}</span>
+                <span class='amount'>{{convertCurrency(movimentation.total)}}</span>
             </div>
         </div>
     </div>

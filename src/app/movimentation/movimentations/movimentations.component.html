@@ -43,7 +43,7 @@
                     <span>{{formatDate(movimentation.date)}}</span>
                 </div>
                 <div>
-                    <span>{{movimentation.amount}}</span>
+                    <span>{{convertCurrency(movimentation.amount)}}</span>
                 </div>
                 <div>
                     <span>{{movimentation.category}}</span>
@@ -55,7 +55,7 @@
         </div>
         <footer class="footer">
             <div>
-                <h4> Total: {{total}}</h4>
+                <h4> Total: {{convertCurrency(total)}}</h4>
             </div>
         </footer>
     </div>

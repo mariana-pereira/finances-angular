@@ -5,7 +5,7 @@
             <h1>{{expense.shop}}  {{formatDate(expense.date)}}</h1>
             <h4>{{formatDate(expense.date)}}</h4>
             <h4>{{expense.shop}}</h4>
-            <p>Valor: {{expense.amount}}</p>
+            <p>Valor: {{convertCurrency(expense.amount)}}</p>
             <p>Cartão: {{expense.card.name}}</p>
             <p>Categoria: {{expense.category}}</p>
         </div>

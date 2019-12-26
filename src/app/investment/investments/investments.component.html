@@ -10,8 +10,8 @@
                 <span class="type">Banco {{investment.account.bank}}</span>
                 <div class="amount">
                     <span>Objetivo: {{investment.target.name}}</span>
-                    <span>Valor aplicado: {{investment.application_amount}}</span>
-                    <span>Valor total: {{investment.total_amount}}</span>
+                    <span>Valor aplicado: {{convertCurrency(investment.application_amount)}}</span>
+                    <span>Valor total: {{convertCurrency(investment.total_amount)}}</span>
                 </div>
             </div>
         </div>

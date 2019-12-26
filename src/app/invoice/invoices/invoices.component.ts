@@ -33,4 +33,8 @@ export class InvoicesComponent implements OnInit {
     return formatedDate.toLocaleDateString();
   }
 
+  convertCurrency(amount) {
+    return Number(amount).toLocaleString("pt", {style: "currency", currency: "BRL", minimumFractionDigits: 2})
+  }
+
 }

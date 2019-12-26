@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class ExpensesComponent implements OnInit {
 
   expenses: any[];
-  total: any;
+  total: any = 0.00;
 
   month: string = (new Date().getMonth() + 1).toString();
   year: string = new Date().getFullYear().toString();
@@ -47,5 +47,9 @@ export class ExpensesComponent implements OnInit {
     var formatedDate = new Date(date);
 
     return formatedDate.toLocaleDateString();
+  }
+
+  convertCurrency(amount) {
+    return Number(amount).toLocaleString("pt", {style: "currency", currency: "BRL", minimumFractionDigits: 2})
   }
 }

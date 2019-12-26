@@ -11,7 +11,7 @@
             </div>
             <div *ngFor='let item of items' class="tile">
                 <div class="item">{{item.name}}</div>
-                <div class="amount">{{item.amount}}</div>
+                <div class="amount">{{convertCurrency(item.amount)}}</div>
                 <div class="icon">
                     <button class="icon-button" (click)="deleteItem(item.id)">
                         <mat-icon class="material-icons color_purple">delete</mat-icon>
@@ -26,7 +26,7 @@
         </form>
         <footer>
             <div>
-                <h4>{{total}}</h4>
+                <h4>{{convertCurrency(total)}}</h4>
             </div>
         </footer>
     </div>

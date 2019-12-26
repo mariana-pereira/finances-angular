@@ -3,17 +3,17 @@
         <div class="card-container">
             <div class="card" (click)="navigate('/account/accounts')">
                 <mat-icon class="material-icons color_purple">attach_money</mat-icon>
-                <h1>{{account}}</h1>
+                <h1>{{convertCurrency(account)}}</h1>
                 <p>Saldo em conta</p>
             </div>
             <div class="card" (click)="navigate('/investment/investments')">
                 <mat-icon class="material-icons color_purple">monetization_on</mat-icon>
-                <h1>{{investment}}</h1>
+                <h1>{{convertCurrency(investment)}}</h1>
                 <p>Saldo investido</p>
             </div>
             <div class="card" (click)="navigate('/invoice/invoices')">
                 <mat-icon class="material-icons color_purple">description</mat-icon>
-                <h1>{{invoice}}</h1>
+                <h1>{{convertCurrency(invoice)}}</h1>
                 <p>Total de faturas</p>
             </div>
         </div>
@@ -39,7 +39,7 @@
                         <span>{{formatDate(income?.date)}}</span>
                     </div>
                     <div>
-                        <span>{{income?.amount}}</span>
+                        <span>{{convertCurrency(income?.amount)}}</span>
                     </div>
                     <div>
                         <span>{{income?.category}}</span>
@@ -70,7 +70,7 @@
                         <span>{{formatDate(outcome?.date)}}</span>
                     </div>
                     <div>
-                        <span>{{outcome?.amount}}</span>
+                        <span>{{convertCurrency(outcome?.amount)}}</span>
                     </div>
                     <div>
                         <span>{{outcome?.category}}</span>
@@ -101,7 +101,7 @@
                         <span>{{formatDate(expense?.date)}}</span>
                     </div>
                     <div>
-                        <span>{{expense?.amount}}</span>
+                        <span>{{convertCurrency(expense?.amount)}}</span>
                     </div>
                     <div>
                         <span>{{expense?.shop}}</span>
