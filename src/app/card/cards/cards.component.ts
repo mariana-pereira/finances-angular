@@ -29,4 +29,5 @@ export class CardsComponent implements OnInit {
   convertCurrency(amount) {
     return Number(amount).toLocaleString("pt", {style: "currency", currency: "BRL", minimumFractionDigits: 2})
   }
+
 }
