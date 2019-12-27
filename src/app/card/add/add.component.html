@@ -4,7 +4,7 @@
         <form [formGroup]='cardForm' (ngSubmit)="onSubmit()">
 
             <input type='text' name='name' placeholder='nome' formControlName='name' />
-            <input type='text' name='number' placeholder='número' mask='0000 0000 0000 0000' formControlName='number' />
+            <input *ngIf="title === 'Adicionar Cartão'" type='text' name='number' placeholder='número' mask='0000 0000 0000 0000' formControlName='number' />
             <input currencyMask type='text' name='totalLimit' placeholder='limite total' [options]="{ prefix: '', align: 'left', thousands: '.', decimal: ',' }" formControlName='total_limit' />
             <input currencyMask type='text' name='availableLimit' placeholder='limite disponível' [options]="{ prefix: '', align: 'left', thousands: '.', decimal: ',' }"
                 formControlName='available_limit' />

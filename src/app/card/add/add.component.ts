@@ -36,6 +36,7 @@ export class AddComponent implements OnInit {
 
       this.cardService.show(this.id).subscribe((data: any) => {
         this.updateForm(data);
+        this.cardForm.controls.number.patchValue(data.number.replace(/(?<=\d{4})\d(?=\d{4})/g, 'x'))
       });
     } else {
       this.title = 'Adicionar Cartão';
